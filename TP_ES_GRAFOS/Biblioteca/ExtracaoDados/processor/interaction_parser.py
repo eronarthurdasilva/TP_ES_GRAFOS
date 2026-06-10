@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
 """
 Responsabilidade: ler os JSONs brutos de dados_brutos/ e separar
 as interações entre usuários em 3 arquivos em dados_processados/:
@@ -22,10 +25,9 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-
 # ─── Pesos conforme o enunciado ───────────────────────────────────────────────
 PESO_COMENTARIO = 2   # comentário em issue ou PR
-PESO_FECHAMENTO = 3   # abertura de issue comentada/fechada por outro usuário
+PESO_FECHAMENTO = 3   # fechamento de issue por outro usuário
 PESO_APROVACAO  = 4   # revisão/aprovação de PR
 PESO_MERGE      = 5   # merge de PR
 
@@ -79,6 +81,7 @@ class InteractionParser:
             for comentario in issue.get("comments", {}).get("nodes", []):
                 autor_comentario = self._login(comentario.get("author"))
                 if not autor_comentario:
+                    # Comentário sem autor (bot deletado etc) — ignora
                     continue
 
                 # Ignora auto-comentário (usuário comentando na própria issue)
@@ -98,11 +101,6 @@ class InteractionParser:
         """
         Extrai fechamentos de issues feitos por outro usuário.
         Regra: quem fechou → quem abriu (peso 3).
-
-        O campo closer pode ser:
-            - PullRequest → quem fez merge fechou a issue
-            - Commit      → quem fez o commit fechou a issue
-            - None        → fechamento manual sem vínculo (ignorado)
         """
         interacoes = []
 
@@ -115,13 +113,11 @@ class InteractionParser:
                 continue
 
             # Navega até o ClosedEvent dentro de timelineItems
-            timeline_nodes = (
-                issue.get("timelineItems", {}).get("nodes", [])
-            )
+            timeline_nodes = issue.get("timelineItems", {}).get("nodes", [])
             if not timeline_nodes:
                 continue
 
-            closed_event = timeline_nodes[0]            # last: 1 → só 1 nó
+            closed_event = timeline_nodes[0]            # normalmente último evento
             closer       = closed_event.get("closer")
             if not closer:
                 continue
@@ -130,7 +126,7 @@ class InteractionParser:
             quem_fechou: Optional[str] = None
 
             if typename == "PullRequest":
-                # PR que fechou a issue — quem fez merge é o responsável
+                # PR que fechou a issue — quem fez merge fechou a issue
                 quem_fechou = self._login(closer.get("mergedBy"))
 
             elif typename == "Commit":
@@ -164,7 +160,11 @@ class InteractionParser:
 
             for comentario in pr.get("comments", {}).get("nodes", []):
                 autor_comentario = self._login(comentario.get("author"))
-                if not autor_comentario or autor_comentario == autor_pr:
+                if not autor_comentario:
+                    continue
+
+                # Ignora auto-comentário no próprio PR
+                if autor_comentario == autor_pr:
                     continue
 
                 interacoes.append({
@@ -182,10 +182,9 @@ class InteractionParser:
 
         Regras:
             - Review com state APPROVED ou CHANGES_REQUESTED → peso 4
-              (ambos representam análise técnica relevante)
             - Merge → peso 5
         """
-        interacoes = []
+        interacoes: List[Dict[str, Any]] = []
 
         for pr in self._carregar_chunks("pull_requests"):
             autor_pr = self._login(pr.get("author"))
@@ -195,25 +194,21 @@ class InteractionParser:
             # Reviews (aprovações e pedidos de mudança)
             for review in pr.get("reviews", {}).get("nodes", []):
                 autor_review = self._login(review.get("author"))
-                estado       = review.get("state", "")
-
-                if not autor_review or autor_review == autor_pr:
+                state = (review.get("state") or "").upper()
+                if not autor_review:
+                    continue
+                if autor_review == autor_pr:
                     continue
 
-                # Só conta reviews que representam análise técnica real
-                if estado not in ("APPROVED", "CHANGES_REQUESTED"):
-                    continue
+                if state in ("APPROVED", "CHANGES_REQUESTED"):
+                    interacoes.append({
+                        "de":   autor_review,
+                        "para": autor_pr,
+                        "tipo": "aprovacao",
+                        "peso": PESO_APROVACAO,
+                    })
 
-                tipo = "aprovacao" if estado == "APPROVED" else "revisao"
-
-                interacoes.append({
-                    "de":   autor_review,
-                    "para": autor_pr,
-                    "tipo": tipo,
-                    "peso": PESO_APROVACAO,
-                })
-
-            # Merge
+            # Merge (quem fez o merge)
             quem_mergeu = self._login(pr.get("mergedBy"))
             if quem_mergeu and quem_mergeu != autor_pr:
                 interacoes.append({
@@ -231,10 +226,8 @@ class InteractionParser:
         """
         Lê todos os arquivos <prefixo>_*.json de dados_brutos/
         e retorna uma lista única com todos os itens.
-
-        Exemplo: prefixo="issues" lê issues_1.json, issues_2.json, ...
         """
-        todos = []
+        todos: List[Dict[str, Any]] = []
         arquivos = sorted(self.dados_brutos.glob(f"{prefixo}_*.json"))
 
         if not arquivos:
@@ -242,9 +235,27 @@ class InteractionParser:
             return todos
 
         for arquivo in arquivos:
-            with arquivo.open("r", encoding="utf-8") as f:
-                dados = json.load(f)
-                todos.extend(dados)
+            try:
+                with arquivo.open("r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    # Se o arquivo já for uma lista de nós, aceita diretamente
+                    if isinstance(data, list):
+                        todos.extend(data)
+                    # Se o arquivo vier em formato { "nodes": [...] } ou similar
+                    elif isinstance(data, dict):
+                        # tenta achar uma lista interna chamada nodes ou items
+                        if "nodes" in data and isinstance(data["nodes"], list):
+                            todos.extend(data["nodes"])
+                        elif "items" in data and isinstance(data["items"], list):
+                            todos.extend(data["items"])
+                        else:
+                            # se for um dict que representa um item único, adiciona
+                            todos.append(data)
+                    else:
+                        # formato inesperado — ignora com aviso
+                        print(f"Aviso: formato desconhecido em {arquivo}, ignorando.")
+            except Exception as exc:
+                print(f"Erro ao ler {arquivo}: {exc}")
 
         return todos
 
@@ -260,11 +271,6 @@ class InteractionParser:
         """
         Extrai o login de um objeto autor do GraphQL.
         Retorna None se o objeto for None ou não tiver 'login'.
-
-        Exemplos de entrada:
-            {"login": "vaxry"}  → "vaxry"
-            None                → None
-            {}                  → None
         """
         if not obj:
             return None
