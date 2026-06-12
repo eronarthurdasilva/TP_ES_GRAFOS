@@ -23,7 +23,6 @@ Desvantagens:
 """
 
 import xml.etree.ElementTree as ET
-from collections import deque
 from typing import Dict
 
 from AbstractGraph import AbstractGraph
@@ -281,7 +280,7 @@ class AdjacencyListGraph(AbstractGraph):
         Returns:
             True se getEdgeCount() == 0.
         """
-        return self.getEdgeCount() == 0
+        return super().isEmptyGraph()
 
     def isCompleteGraph(self) -> bool:
         """
@@ -294,8 +293,7 @@ class AdjacencyListGraph(AbstractGraph):
         Returns:
             True se o número de arestas == n * (n - 1).
         """
-        n = self._num_vertices
-        return self.getEdgeCount() == n * (n - 1)
+        return super().isCompleteGraph()
 
     def isConnected(self) -> bool:
         """
@@ -317,51 +315,7 @@ class AdjacencyListGraph(AbstractGraph):
         Returns:
             True se o grafo for fortemente conexo.
         """
-        if self._num_vertices == 0:
-            return True
-
-        def bfs(source: int, use_transpose: bool) -> int:
-            """
-            Executa BFS a partir de source.
-            use_transpose=True inverte a direção das arestas.
-            Retorna quantos vértices foram visitados.
-            """
-            visited = [False] * self._num_vertices
-            queue = deque([source])
-            visited[source] = True
-            count = 1
-
-            while queue:
-                node = queue.popleft()
-                
-                if use_transpose:
-                    # Transposto: procura quem CHEGA em node
-                    for v in range(self._num_vertices):
-                        if node in self._adjacency_list[v] and not visited[v]:
-                            visited[v] = True
-                            queue.append(v)
-                            count += 1
-                else:
-                    # Normal: procura quem node ATINGE
-                    for neighbor in self._adjacency_list[node]:
-                        if not visited[neighbor]:
-                            visited[neighbor] = True
-                            queue.append(neighbor)
-                            count += 1
-
-            return count
-
-        n = self._num_vertices
-
-        # BFS no grafo original a partir de 0
-        if bfs(0, use_transpose=False) != n:
-            return False
-
-        # BFS no grafo transposto a partir de 0
-        if bfs(0, use_transpose=True) != n:
-            return False
-
-        return True
+        return super().isConnected()
 
     # ─────────────────────────────────────────────────────────────────────────
     # EXPORTAÇÃO GEPHI

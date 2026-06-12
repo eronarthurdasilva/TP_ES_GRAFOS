@@ -26,7 +26,6 @@ Desvantagens:
 """
 
 import xml.etree.ElementTree as ET
-from collections import deque
 from typing import List
 
 from AbstractGraph import AbstractGraph
@@ -313,7 +312,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
         Returns:
             True se não existir nenhuma aresta.
         """
-        return self.getEdgeCount() == 0
+        return super().isEmptyGraph()
 
     def isCompleteGraph(self) -> bool:
         """
@@ -332,8 +331,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
         Returns:
             True se o número de arestas == n * (n - 1).
         """
-        n = self._num_vertices
-        return self.getEdgeCount() == n * (n - 1)
+        return super().isCompleteGraph()
 
     def isConnected(self) -> bool:
         """
@@ -360,49 +358,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
         Returns:
             True se o grafo for fortemente conexo.
         """
-        if self._num_vertices == 0:
-            return True
-
-        # ── BFS 1: grafo original ──────────────────────────────────────────
-        def bfs(source: int, use_transpose: bool) -> int:
-            """
-            Executa BFS a partir de source.
-            use_transpose=True inverte a direção das arestas.
-            Retorna quantos vértices foram visitados.
-            """
-            visited = [False] * self._num_vertices
-            queue   = deque([source])
-            visited[source] = True
-            count = 1
-
-            while queue:
-                node = queue.popleft()
-                for neighbor in range(self._num_vertices):
-                    # Normal: matrix[node][neighbor] → saindo de node
-                    # Transposto: matrix[neighbor][node] → chegando em node
-                    peso = (
-                        self._matrix[neighbor][node]
-                        if use_transpose
-                        else self._matrix[node][neighbor]
-                    )
-                    if peso != 0.0 and not visited[neighbor]:
-                        visited[neighbor] = True
-                        queue.append(neighbor)
-                        count += 1
-
-            return count
-
-        n = self._num_vertices
-
-        # BFS no grafo original a partir de 0
-        if bfs(0, use_transpose=False) != n:
-            return False
-
-        # BFS no grafo transposto a partir de 0
-        if bfs(0, use_transpose=True) != n:
-            return False
-
-        return True
+        return super().isConnected()
 
     # ─────────────────────────────────────────────────────────────────────────
     # EXPORTAÇÃO GEPHI

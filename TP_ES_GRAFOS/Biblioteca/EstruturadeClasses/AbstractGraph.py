@@ -19,6 +19,7 @@ Hierarquia:
 """
 
 from abc import ABC, abstractmethod
+from collections import deque
 from typing import List
 
 
@@ -66,9 +67,7 @@ class AbstractGraph(ABC):
         # Exemplo: no grafo de colaboração, pode representar o PageRank do usuário
         # Índice: vertexWeights[v] = peso do vértice v
         self._vertex_weights: List[float] = [0.0] * num_vertices
-
         # Rótulo (label) de cada vértice — inicializado com string vazia
-        # Exemplo: no grafo de colaboração, armazena o login do GitHub
         # Índice: vertexLabels[v] = "vaxry" (login do vértice v)
         self._vertex_labels: List[str] = [""] * num_vertices
 
@@ -80,7 +79,6 @@ class AbstractGraph(ABC):
         """
         Verifica se o índice v é um vértice válido do grafo.
 
-        Por que isso existe?
             Sem validação, acessar self._vertex_weights[999] num grafo de 10
             vértices causaria IndexError genérico, sem indicar o problema real.
             Com validação, o erro é claro e acontece antes de qualquer operação.
@@ -447,7 +445,6 @@ class AbstractGraph(ABC):
             Número de arestas que partem de u.
         """
 
-    @abstractmethod
     def isConnected(self) -> bool:
         """
         Verifica se o grafo é conexo (fortemente conexo para grafos direcionados).
@@ -459,8 +456,36 @@ class AbstractGraph(ABC):
         Returns:
             True se o grafo for fortemente conexo.
         """
+        if self._num_vertices <= 1:
+            return True
 
-    @abstractmethod
+        def bfs(source: int, use_transpose: bool = False) -> int:
+            visited = [False] * self._num_vertices
+            queue = deque([source])
+            visited[source] = True
+            count = 1
+
+            while queue:
+                current = queue.popleft()
+                for neighbor in range(self._num_vertices):
+                    if neighbor == current:
+                        continue
+
+                    has_edge = (
+                        self.hasEdge(neighbor, current)
+                        if use_transpose
+                        else self.hasEdge(current, neighbor)
+                    )
+                    if has_edge and not visited[neighbor]:
+                        visited[neighbor] = True
+                        queue.append(neighbor)
+                        count += 1
+
+            return count
+
+        total_vertices = self._num_vertices
+        return bfs(0, use_transpose=False) == total_vertices and bfs(0, use_transpose=True) == total_vertices
+
     def isEmptyGraph(self) -> bool:
         """
         Verifica se o grafo é vazio (sem arestas).
@@ -471,8 +496,8 @@ class AbstractGraph(ABC):
         Returns:
             True se getEdgeCount() == 0.
         """
+        return self.getEdgeCount() == 0
 
-    @abstractmethod
     def isCompleteGraph(self) -> bool:
         """
         Verifica se o grafo é completo.
@@ -486,6 +511,7 @@ class AbstractGraph(ABC):
         Returns:
             True se o número de arestas == n * (n - 1).
         """
+        return self.getEdgeCount() == self._num_vertices * (self._num_vertices - 1)
 
     @abstractmethod
     def exportToGEPHI(self, path: str) -> None:

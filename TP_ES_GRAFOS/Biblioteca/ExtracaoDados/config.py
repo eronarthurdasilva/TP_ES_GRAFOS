@@ -11,7 +11,23 @@ Este módulo define:
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:
+    def load_dotenv(dotenv_path: Path) -> bool:
+        if not dotenv_path.exists():
+            return False
+
+        for raw_line in dotenv_path.read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+        return True
 
 # A raiz do projeto é três níveis acima deste arquivo.
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
