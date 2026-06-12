@@ -16,8 +16,16 @@ from dotenv import load_dotenv
 # A raiz do projeto é três níveis acima deste arquivo.
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
-# Carrega as variáveis de ambiente do arquivo .env na raiz do projeto.
-load_dotenv(ROOT_DIR / '.env')
+# O .env pode estar junto deste módulo ou na raiz do projeto, dependendo de
+# como o repositório foi organizado no checkout.
+ENV_FILES = [
+    Path(__file__).resolve().parent / ".env",
+    ROOT_DIR / ".env",
+]
+for _env_file in ENV_FILES:
+    if _env_file.exists():
+        load_dotenv(_env_file)
+        break
 
 # Credenciais e identificadores do repositório que serão usados na extração.
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
@@ -42,6 +50,12 @@ _obrigatorias = {
 for _nome, _valor in _obrigatorias.items():
     if not _valor:
         raise RuntimeError(f"{_nome} não encontrado ou vazio no .env")
+
+if GITHUB_TOKEN == "your_personal_access_token":
+    raise RuntimeError(
+        "GITHUB_TOKEN ainda está com o valor de exemplo no .env. "
+        "Substitua por um token pessoal válido do GitHub antes de executar a extração."
+    )
 
 # Exportações explícitas do módulo para facilitar imports.
 __all__ = [
