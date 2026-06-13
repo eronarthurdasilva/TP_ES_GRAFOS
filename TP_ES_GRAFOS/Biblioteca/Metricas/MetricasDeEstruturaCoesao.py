@@ -6,7 +6,6 @@ from pathlib import Path
 # ==========================================================
 # MÉTRICAS DE ESTRUTURA E COESÃO
 # 
-# Este arquivo segue o padrão da pasta Metricas do projeto.
 # Ele não usa bibliotecas de grafos, como NetworkX, igraph ou graph-tool.
 # Toda a representação do grafo é feita com estruturas básicas do Python:
 # dict, set, list e tuple.
@@ -27,11 +26,24 @@ from pathlib import Path
 
 def carregar_json(caminho_arquivo):
     """
-    Lê um arquivo JSON contendo interações do repositório.
+    Carrega e retorna o conteúdo de um arquivo JSON.
+
+    Parâmetros:
+        caminho_arquivo (str | pathlib.Path):
+            Caminho do arquivo JSON que contém os dados de interação do repositório.
+
+    Retorno:
+        list | dict:
+            Conteúdo do JSON já convertido para estruturas nativas do Python.
+
+    Exceções:
+        FileNotFoundError:
+            Gerada quando o arquivo informado não existe.
 
     Relação com grafos:
-    - Cada registro do JSON representa uma possível aresta.
-    - Os usuários presentes em origem e destino representam vértices.
+        Nesta etapa, cada registro do JSON pode representar uma aresta do grafo.
+        Os usuários encontrados nos campos de origem e destino formarão o conjunto
+        de vértices V, enquanto as interações formarão o conjunto de arestas E.
     """
     caminho_arquivo = Path(caminho_arquivo)
 
@@ -44,15 +56,32 @@ def carregar_json(caminho_arquivo):
 
 def extrair_lista_registros(conteudo_json):
     """
-    Extrai a lista de interações do JSON.
+    Extrai a lista de registros de interação a partir do conteúdo carregado do JSON.
 
-    Formato principal esperado:
-    [
-        {"de": "usuario_a", "para": "usuario_b", "peso": 3}
-    ]
+    Parâmetros:
+        conteudo_json (list | dict):
+            Conteúdo retornado por carregar_json. Pode ser diretamente uma lista
+            de registros ou um dicionário contendo a lista em uma chave conhecida.
 
-    Também aceita formatos em que a lista esteja dentro de uma chave,
-    por exemplo: "arestas", "edges", "dados" ou "interacoes".
+    Retorno:
+        list:
+            Lista de registros de interação que serão convertidos em arestas.
+
+    Formatos aceitos:
+        1. Lista direta:
+            [
+                {"de": "usuario_a", "para": "usuario_b", "peso": 3}
+            ]
+
+        2. Dicionário contendo a lista em uma das chaves:
+            "arestas", "edges", "dados", "interacoes", "registros" ou "items".
+
+    Exceções:
+        ValueError:
+            Gerada quando o conteúdo não possui um formato reconhecido.
+
+    Relação com grafos:
+        Esta função prepara os dados brutos para a construção do conjunto de arestas E.
     """
     if isinstance(conteudo_json, list):
         return conteudo_json
@@ -76,11 +105,30 @@ def extrair_lista_registros(conteudo_json):
 
 def obter_valor(registro, nomes_possiveis):
     """
-    Busca um campo no registro considerando nomes alternativos.
+    Busca o valor de um campo em um registro, aceitando nomes alternativos.
+
+    Parâmetros:
+        registro (dict):
+            Registro individual de interação.
+        nomes_possiveis (list[str]):
+            Lista de nomes possíveis para o campo desejado.
+
+    Retorno:
+        any | None:
+            Valor encontrado no primeiro nome existente dentro do registro.
+            Retorna None caso nenhum dos nomes seja encontrado.
 
     Exemplo:
-    - origem pode vir como "de", "origem", "source" ou "from".
-    - destino pode vir como "para", "destino", "target" ou "to".
+        Para origem, podem ser testados nomes como:
+        "de", "origem", "source", "from", "autor" e "user_from".
+
+    Objetivo:
+        Permitir que o código funcione mesmo que os arquivos JSON usem nomes
+        diferentes para representar origem, destino ou peso.
+
+    Relação com grafos:
+        Ajuda a identificar os dois vértices extremos de uma aresta:
+        origem e destino.
     """
     for nome in nomes_possiveis:
         if nome in registro:
@@ -90,13 +138,26 @@ def obter_valor(registro, nomes_possiveis):
 
 def converter_peso(valor):
     """
-    Converte o peso da aresta para float.
+    Converte o peso de uma interação para float.
+
+    Parâmetros:
+        valor (any):
+            Valor bruto do peso vindo do JSON. Pode ser número, texto numérico,
+            vazio ou None.
+
+    Retorno:
+        float:
+            Peso convertido. Caso o valor esteja vazio ou inválido, retorna 1.0.
 
     Relação com grafos:
-    - O peso representa a intensidade da relação.
-    - Exemplo: quantidade de comentários, fechamentos ou revisões.
-    - Para densidade, clustering e assortatividade por grau, a existência da
-      aresta é mais importante que o peso, mas o peso total é mantido no relatório.
+        O peso representa a intensidade da aresta. No contexto do GitHub, ele pode
+        indicar, por exemplo, quantidade de comentários, fechamentos, revisões,
+        aprovações ou merges entre dois usuários.
+
+    Observação:
+        Para as métricas de densidade, clustering e assortatividade por grau, o
+        cálculo principal usa a existência da aresta. Mesmo assim, o peso é mantido
+        para relatório e análise da intensidade total das interações.
     """
     if valor is None or valor == "":
         return 1.0
@@ -109,15 +170,28 @@ def converter_peso(valor):
 
 def normalizar_registro(registro):
     """
-    Converte um registro bruto em uma aresta padronizada.
+    Converte um registro bruto do JSON em uma aresta padronizada.
+
+    Parâmetros:
+        registro (dict):
+            Registro de interação contendo origem, destino e, opcionalmente, peso.
 
     Retorno:
-    (origem, destino, peso)
+        tuple[str, str, float]:
+            Tupla no formato:
+            (origem, destino, peso)
+
+    Exceções:
+        ValueError:
+            Gerada quando o registro não é um dicionário, não possui origem/destino
+            ou contém origem/destino vazios.
 
     Relação com grafos:
-    - origem e destino são vértices.
-    - origem -> destino é uma aresta direcionada.
-    - peso é a intensidade da interação.
+        A função transforma um dado bruto em uma aresta direcionada:
+            origem -> destino
+
+        Origem e destino são vértices do grafo, e o peso representa a intensidade
+        da relação entre esses dois vértices.
     """
     if not isinstance(registro, dict):
         raise ValueError(f"Registro inválido. Esperava dicionário: {registro}")
@@ -141,16 +215,35 @@ def normalizar_registro(registro):
 
 def construir_grafo_direcionado(registros, ignorar_auto_lacos=True):
     """
-    Constrói uma representação simples de grafo direcionado.
+    Constrói uma representação interna de grafo direcionado a partir dos registros.
+
+    Parâmetros:
+        registros (list[dict]):
+            Lista de registros de interação.
+        ignorar_auto_lacos (bool):
+            Quando True, remove arestas em que origem e destino são o mesmo usuário.
+            Essas arestas são chamadas de auto-laços.
 
     Retorno:
-    - vertices: conjunto de usuários
-    - arestas_direcionadas: dicionário {(origem, destino): peso_total}
+        tuple[set, dict]:
+            vertices:
+                Conjunto com todos os usuários encontrados.
+            arestas_direcionadas:
+                Dicionário no formato:
+                {
+                    (origem, destino): peso_total
+                }
+
+    Funcionamento:
+        - Cada registro é normalizado para (origem, destino, peso).
+        - Origem e destino são adicionados ao conjunto de vértices.
+        - A aresta (origem, destino) recebe o peso acumulado.
+        - Se a mesma aresta aparecer mais de uma vez, os pesos são somados.
 
     Relação com grafos:
-    - V é o conjunto de vértices.
-    - E é o conjunto de arestas.
-    - O grafo é direcionado porque a interação tem origem e destino.
+        Implementa a construção de G = (V, E), onde:
+        - V é o conjunto de vértices.
+        - E é o conjunto de arestas direcionadas.
     """
     vertices = set()
     arestas_direcionadas = {}
@@ -176,15 +269,35 @@ def construir_grafo_direcionado(registros, ignorar_auto_lacos=True):
 
 def converter_para_nao_direcionado(arestas_direcionadas):
     """
-    Converte o grafo direcionado para uma versão não direcionada.
+    Converte as arestas direcionadas em uma representação não direcionada.
 
-    Exemplo:
-    A -> B e B -> A viram uma única conexão A -- B.
+    Parâmetros:
+        arestas_direcionadas (dict):
+            Dicionário de arestas direcionadas no formato:
+            {
+                (origem, destino): peso_total
+            }
 
-    Por que fazer isso?
-    - Densidade pode ser calculada no grafo direcionado.
-    - Clustering e assortatividade por grau costumam ser analisados na estrutura
-      de vizinhança sem direção, principalmente para redes sociais/colaboração.
+    Retorno:
+        dict:
+            Dicionário de arestas não direcionadas no formato:
+            {
+                (vertice_a, vertice_b): peso_total
+            }
+
+    Funcionamento:
+        - Arestas A -> B e B -> A passam a representar uma única conexão A -- B.
+        - Os pesos das duas direções são somados.
+        - A ordem dos vértices na chave é padronizada para evitar duplicidade.
+
+    Por que isso é feito:
+        Algumas métricas de coesão e estrutura social, como clustering coefficient
+        e assortatividade por grau, costumam ser analisadas considerando apenas se
+        dois colaboradores estão conectados, sem diferenciar a direção da interação.
+
+    Relação com grafos:
+        Transforma um grafo direcionado em uma versão não direcionada para cálculo
+        de métricas baseadas em vizinhança.
     """
     arestas_nao_direcionadas = {}
 
@@ -209,16 +322,29 @@ def converter_para_nao_direcionado(arestas_direcionadas):
 
 def montar_lista_adjacencia_nao_direcionada(vertices, arestas_nao_direcionadas):
     """
-    Monta uma lista de adjacência não direcionada.
+    Monta a lista de adjacência de um grafo não direcionado.
+
+    Parâmetros:
+        vertices (set):
+            Conjunto de vértices do grafo.
+        arestas_nao_direcionadas (dict):
+            Dicionário de arestas não direcionadas.
 
     Retorno:
-    {
-        vertice: {vizinho_1, vizinho_2, ...}
-    }
+        dict[str, set]:
+            Dicionário no formato:
+            {
+                vertice: {vizinho_1, vizinho_2, ...}
+            }
+
+    Funcionamento:
+        Para cada aresta A -- B:
+        - B é adicionado como vizinho de A.
+        - A é adicionado como vizinho de B.
 
     Relação com grafos:
-    - Lista de adjacência é uma representação clássica de grafos.
-    - Ela facilita calcular grau, vizinhança, clustering e assortatividade.
+        A lista de adjacência é uma representação clássica de grafos. Ela facilita
+        o cálculo de grau, vizinhança, clustering coefficient e assortatividade.
     """
     adjacencia = {}
 
@@ -235,19 +361,33 @@ def montar_lista_adjacencia_nao_direcionada(vertices, arestas_nao_direcionadas):
 
 def calcular_densidade_direcionada(vertices, arestas_direcionadas):
     """
-    Calcula a densidade da rede considerando direção.
+    Calcula a densidade da rede considerando as arestas direcionadas.
+
+    Parâmetros:
+        vertices (set):
+            Conjunto de vértices do grafo.
+        arestas_direcionadas (dict):
+            Dicionário de arestas direcionadas.
+
+    Retorno:
+        float:
+            Valor da densidade direcionada no intervalo entre 0 e 1.
 
     Fórmula:
-    densidade = m / (n * (n - 1))
+        densidade = m / (n * (n - 1))
 
     Onde:
-    - n = número de vértices
-    - m = número de arestas existentes
-    - n * (n - 1) = número máximo de arestas direcionadas sem auto-laços
+        n = número de vértices.
+        m = número de arestas direcionadas existentes.
+        n * (n - 1) = número máximo de arestas direcionadas sem auto-laços.
 
     Interpretação:
-    - Próximo de 0: rede esparsa, poucos usuários interagem entre si.
-    - Próximo de 1: rede muito conectada.
+        - Valor próximo de 0: rede esparsa, com poucas conexões.
+        - Valor próximo de 1: rede muito conectada.
+
+    Relação com grafos:
+        Mede a proporção de arestas existentes em relação ao número máximo possível
+        de arestas em um grafo direcionado.
     """
     n = len(vertices)
     m = len(arestas_direcionadas)
@@ -260,10 +400,29 @@ def calcular_densidade_direcionada(vertices, arestas_direcionadas):
 
 def calcular_densidade_nao_direcionada(vertices, arestas_nao_direcionadas):
     """
-    Calcula a densidade da rede sem considerar direção.
+    Calcula a densidade da rede sem considerar a direção das arestas.
+
+    Parâmetros:
+        vertices (set):
+            Conjunto de vértices do grafo.
+        arestas_nao_direcionadas (dict):
+            Dicionário de arestas não direcionadas.
+
+    Retorno:
+        float:
+            Valor da densidade não direcionada no intervalo entre 0 e 1.
 
     Fórmula:
-    densidade = m / (n * (n - 1) / 2)
+        densidade = m / (n * (n - 1) / 2)
+
+    Onde:
+        n = número de vértices.
+        m = número de arestas não direcionadas existentes.
+        n * (n - 1) / 2 = número máximo de conexões sem direção.
+
+    Relação com grafos:
+        Indica o quanto a rede está conectada quando a direção das interações é
+        ignorada.
     """
     n = len(vertices)
     m = len(arestas_nao_direcionadas)
@@ -278,19 +437,35 @@ def calcular_densidade_nao_direcionada(vertices, arestas_nao_direcionadas):
 
 def calcular_coeficiente_aglomeracao(vertices, arestas_nao_direcionadas):
     """
-    Calcula o clustering coefficient médio.
+    Calcula o coeficiente de aglomeração médio do grafo.
 
-    Ideia:
-    - Para cada vértice, observamos seus vizinhos.
-    - Depois verificamos quantas conexões existem entre esses vizinhos.
-    - Se os vizinhos também se conectam entre si, há formação de clusters.
-
-    Fórmula local:
-    C(v) = conexões existentes entre vizinhos / conexões possíveis entre vizinhos
+    Parâmetros:
+        vertices (set):
+            Conjunto de vértices do grafo.
+        arestas_nao_direcionadas (dict):
+            Dicionário de arestas não direcionadas.
 
     Retorno:
-    - média considerando todos os vértices
-    - média considerando apenas vértices com grau >= 2
+        tuple[float, float]:
+            media_todos:
+                Média do coeficiente local considerando todos os vértices.
+                Vértices com grau menor que 2 entram com valor 0.
+            media_grau_minimo_2:
+                Média considerando apenas vértices com grau maior ou igual a 2.
+
+    Ideia:
+        Para cada vértice, o algoritmo verifica se seus vizinhos também estão
+        conectados entre si. Quando isso ocorre com frequência, há formação de
+        grupos locais ou clusters.
+
+    Fórmula local:
+        C(v) = conexões existentes entre vizinhos de v /
+               conexões possíveis entre vizinhos de v
+
+    Relação com grafos:
+        Mede a tendência de formação de triângulos e pequenos grupos densos na rede.
+        Em uma rede de colaboração, valores maiores podem indicar comunidades de
+        colaboradores que interagem fortemente entre si.
     """
     adjacencia = montar_lista_adjacencia_nao_direcionada(vertices, arestas_nao_direcionadas)
     conjunto_arestas = set(arestas_nao_direcionadas.keys())
@@ -343,21 +518,36 @@ def calcular_coeficiente_aglomeracao(vertices, arestas_nao_direcionadas):
 
 def calcular_assortatividade_por_grau(vertices, arestas_nao_direcionadas):
     """
-    Calcula a assortatividade por grau.
+    Calcula a assortatividade por grau do grafo.
+
+    Parâmetros:
+        vertices (set):
+            Conjunto de vértices do grafo.
+        arestas_nao_direcionadas (dict):
+            Dicionário de arestas não direcionadas.
+
+    Retorno:
+        float | None:
+            Coeficiente de assortatividade por grau.
+            Retorna None quando a métrica não pode ser calculada, por exemplo,
+            quando não há arestas ou quando não existe variação suficiente nos graus.
 
     Ideia:
-    - Verifica se vértices muito conectados tendem a se conectar com outros
-      vértices muito conectados.
+        A métrica verifica se vértices com muitos vizinhos tendem a se conectar com
+        outros vértices também muito conectados.
 
     Interpretação:
-    - Valor positivo: tendência de conexão entre usuários de grau parecido.
-    - Valor próximo de zero: não há padrão forte.
-    - Valor negativo: usuários muito conectados tendem a se conectar com usuários
-      menos conectados.
+        - Valor positivo:
+            colaboradores muito conectados tendem a se conectar entre si.
+        - Valor próximo de zero:
+            não há padrão forte de conexão por grau.
+        - Valor negativo:
+            colaboradores muito conectados tendem a se conectar com colaboradores
+            menos conectados.
 
     Implementação:
-    - Calcula a correlação entre os graus das extremidades das arestas.
-    - Não usa nenhuma biblioteca de grafos ou estatística.
+        O cálculo é feito por meio da correlação entre os graus dos dois extremos
+        de cada aresta, sem usar bibliotecas de grafos ou estatística.
     """
     if len(arestas_nao_direcionadas) == 0:
         return None
@@ -397,7 +587,25 @@ def calcular_assortatividade_por_grau(vertices, arestas_nao_direcionadas):
 
 def classificar_metrica_zero_um(valor):
     """
-    Classificação simples para métricas que variam entre 0 e 1.
+    Classifica qualitativamente uma métrica cujo valor varia entre 0 e 1.
+
+    Parâmetros:
+        valor (float | None):
+            Valor numérico da métrica.
+
+    Retorno:
+        str:
+            Classificação textual:
+            "indefinido", "muito baixo", "baixo", "moderado", "alto" ou "muito alto".
+
+    Uso no código:
+        É aplicada principalmente para interpretar densidade e coeficiente de
+        aglomeração.
+
+    Observação:
+        Os limites usados são heurísticos e servem para facilitar a leitura do
+        relatório. Dependendo do tamanho e tipo da rede, a interpretação pode ser
+        ajustada.
     """
     if valor is None:
         return "indefinido"
@@ -415,7 +623,27 @@ def classificar_metrica_zero_um(valor):
 
 def interpretar_assortatividade(valor):
     """
-    Interpreta o valor de assortatividade por grau.
+    Gera uma interpretação textual para a assortatividade por grau.
+
+    Parâmetros:
+        valor (float | None):
+            Valor calculado da assortatividade por grau.
+
+    Retorno:
+        str:
+            Texto explicativo sobre o padrão de conexão da rede.
+
+    Interpretação:
+        - Positiva:
+            usuários muito conectados tendem a interagir com outros muito conectados.
+        - Próxima de zero:
+            não há padrão forte de conexão por grau.
+        - Negativa:
+            usuários muito conectados tendem a interagir com usuários menos conectados.
+
+    Objetivo:
+        Facilitar o uso dos resultados no relatório final do trabalho, evitando que
+        apenas o número seja apresentado sem explicação.
     """
     if valor is None:
         return "indefinida, pois não há arestas ou não há variação suficiente nos graus"
@@ -435,12 +663,39 @@ def interpretar_assortatividade(valor):
 
 def analisar_estrutura_coesao_grafo(nome_grafo, registros):
     """
-    Executa as métricas de estrutura e coesão para um grafo.
+    Executa todas as métricas de estrutura e coesão para um grafo específico.
 
-    Métricas calculadas:
-    - densidade da rede
-    - clustering coefficient
-    - assortatividade por grau
+    Parâmetros:
+        nome_grafo (str):
+            Nome descritivo do grafo analisado.
+        registros (list[dict]):
+            Lista de registros de interação correspondente ao grafo.
+
+    Retorno:
+        dict:
+            Dicionário contendo:
+            - nome do grafo;
+            - quantidade de vértices;
+            - quantidade de arestas direcionadas;
+            - quantidade de arestas não direcionadas;
+            - peso total das interações;
+            - densidade direcionada;
+            - densidade não direcionada;
+            - coeficiente de aglomeração médio;
+            - assortatividade por grau;
+            - interpretações textuais das métricas.
+
+    Fluxo:
+        1. Constrói o grafo direcionado.
+        2. Converte o grafo para não direcionado.
+        3. Calcula densidade.
+        4. Calcula clustering coefficient.
+        5. Calcula assortatividade por grau.
+        6. Monta um dicionário final com resultados e interpretações.
+
+    Relação com grafos:
+        Esta função centraliza a análise de G = (V, E) para um dos quatro grafos
+        do trabalho.
     """
     vertices, arestas_direcionadas = construir_grafo_direcionado(registros)
     arestas_nao_direcionadas = converter_para_nao_direcionado(arestas_direcionadas)
@@ -475,12 +730,49 @@ def analisar_estrutura_coesao_grafo(nome_grafo, registros):
 # SAÍDAS
 
 def criar_pasta_saida(pasta_saida):
+    """
+    Cria a pasta de saída, caso ela ainda não exista.
+
+    Parâmetros:
+        pasta_saida (str | pathlib.Path):
+            Caminho onde os arquivos de resultado serão salvos.
+
+    Retorno:
+        pathlib.Path:
+            Caminho da pasta de saída convertido para Path.
+
+    Objetivo:
+        Garantir que os arquivos JSON, CSV e TXT possam ser salvos sem erro de
+        diretório inexistente.
+
+    Relação com grafos:
+        Não calcula métrica de grafo. É uma função auxiliar de organização da saída.
+    """
     pasta_saida = Path(pasta_saida)
     pasta_saida.mkdir(parents=True, exist_ok=True)
     return pasta_saida
 
 
 def arredondar_valor(valor, casas=6):
+    """
+    Arredonda valores numéricos para facilitar a escrita em arquivos de saída.
+
+    Parâmetros:
+        valor (any):
+            Valor a ser tratado.
+        casas (int):
+            Quantidade de casas decimais desejada para números float.
+
+    Retorno:
+        any:
+            - String vazia quando o valor é None.
+            - Float arredondado quando o valor é float.
+            - Valor original nos demais casos.
+
+    Objetivo:
+        Evitar que o CSV fique com números muito longos e melhorar a legibilidade
+        dos resultados.
+    """
     if valor is None:
         return ""
 
@@ -491,6 +783,26 @@ def arredondar_valor(valor, casas=6):
 
 
 def salvar_json(resultados, caminho_saida):
+    """
+    Salva os resultados das métricas em um arquivo JSON.
+
+    Parâmetros:
+        resultados (list[dict]):
+            Lista com os resultados calculados para os grafos.
+        caminho_saida (str | pathlib.Path):
+            Caminho completo do arquivo JSON que será gerado.
+
+    Retorno:
+        None
+
+    Objetivo:
+        Gerar uma saída estruturada que possa ser reutilizada por outros scripts ou
+        consultada posteriormente.
+
+    Formato:
+        O arquivo é salvo com indentação e com suporte a acentos por meio de
+        ensure_ascii=False.
+    """
     caminho_saida = Path(caminho_saida)
     caminho_saida.parent.mkdir(parents=True, exist_ok=True)
 
@@ -499,6 +811,26 @@ def salvar_json(resultados, caminho_saida):
 
 
 def salvar_csv(resultados, caminho_saida):
+    """
+    Salva os resultados das métricas em um arquivo CSV separado por ponto e vírgula.
+
+    Parâmetros:
+        resultados (list[dict]):
+            Lista com os resultados calculados para cada grafo.
+        caminho_saida (str | pathlib.Path):
+            Caminho completo do arquivo CSV que será gerado.
+
+    Retorno:
+        None
+
+    Objetivo:
+        Criar uma tabela simples para análise, comparação entre os quatro grafos e
+        possível inclusão no relatório do trabalho.
+
+    Observação:
+        O delimitador usado é ";", pois esse formato costuma abrir melhor em Excel
+        configurado em português.
+    """
     caminho_saida = Path(caminho_saida)
     caminho_saida.parent.mkdir(parents=True, exist_ok=True)
 
@@ -530,6 +862,29 @@ def salvar_csv(resultados, caminho_saida):
 
 
 def salvar_relatorio_txt(resultados, caminho_saida):
+    """
+    Gera um relatório textual com as métricas e interpretações.
+
+    Parâmetros:
+        resultados (list[dict]):
+            Lista com os resultados das análises.
+        caminho_saida (str | pathlib.Path):
+            Caminho completo do arquivo TXT que será gerado.
+
+    Retorno:
+        None
+
+    Conteúdo gerado:
+        - Título da análise.
+        - Explicação das métricas.
+        - Observações sobre direção das arestas.
+        - Resultados individuais dos quatro grafos.
+        - Interpretações textuais de densidade, aglomeração e assortatividade.
+
+    Objetivo:
+        Produzir uma saída legível para ser usada como base na escrita do relatório
+        acadêmico.
+    """
     caminho_saida = Path(caminho_saida)
     caminho_saida.parent.mkdir(parents=True, exist_ok=True)
 
@@ -580,7 +935,32 @@ def salvar_relatorio_txt(resultados, caminho_saida):
 
 def carregar_registros_dos_grafos(pasta_dados_processados):
     """
-    Carrega os três arquivos de entrada e monta também o grafo integrado.
+    Carrega os registros dos três arquivos processados e monta o grafo integrado.
+
+    Parâmetros:
+        pasta_dados_processados (str | pathlib.Path):
+            Pasta que contém os arquivos:
+            - comentarios.json
+            - fechamentos.json
+            - reviews_merges.json
+
+    Retorno:
+        dict[str, list]:
+            Dicionário no formato:
+            {
+                nome_do_grafo: lista_de_registros
+            }
+
+    Grafos carregados:
+        1. Grafo de comentários em issues e PRs.
+        2. Grafo de fechamentos de issues.
+        3. Grafo de reviews, aprovações e merges.
+        4. Grafo integrado, formado pela união dos registros dos três anteriores.
+
+    Relação com grafos:
+        Define quais conjuntos de arestas serão analisados em cada grafo.
+        O grafo integrado combina as interações para representar uma visão geral
+        da colaboração no repositório.
     """
     pasta_dados_processados = Path(pasta_dados_processados)
 
@@ -608,9 +988,31 @@ def carregar_registros_dos_grafos(pasta_dados_processados):
 
 def analisar_quatro_grafos_estrutura_coesao(pasta_dados_processados, pasta_saida):
     """
-    Função principal desta história.
+    Executa a análise de estrutura e coesão para os quatro grafos do trabalho.
 
-    Executa as métricas de estrutura e coesão nos 4 grafos esperados.
+    Parâmetros:
+        pasta_dados_processados (str | pathlib.Path):
+            Pasta onde estão os arquivos JSON processados.
+        pasta_saida (str | pathlib.Path):
+            Pasta onde serão salvos os arquivos de resultado.
+
+    Retorno:
+        list[dict]:
+            Lista com o resultado das métricas para cada grafo.
+
+    Arquivos gerados:
+        - metricas_estrutura_coesao.json
+        - metricas_estrutura_coesao.csv
+        - relatorio_estrutura_coesao.txt
+
+    Fluxo:
+        1. Cria a pasta de saída.
+        2. Carrega os registros dos quatro grafos.
+        3. Calcula as métricas de cada grafo.
+        4. Salva os resultados em JSON, CSV e TXT.
+
+    Relação com a história:
+        Esta é a função principal da história de métricas de estrutura e coesão.
     """
     pasta_saida = criar_pasta_saida(pasta_saida)
 
@@ -632,14 +1034,35 @@ def analisar_quatro_grafos_estrutura_coesao(pasta_dados_processados, pasta_saida
 
 def localizar_pasta_dados_processados():
     """
-    Localiza automaticamente a pasta de dados processados.
+    Localiza automaticamente a pasta de dados processados do projeto.
 
-    Estrutura principal esperada:
-    Projeto/
-    ├── ExtracaoDados/
-    │   └── dados_processados/
-    └── Metricas/
-        └── MetricasDeEstruturaCoesao.py
+    Parâmetros:
+        Nenhum.
+
+    Retorno:
+        pathlib.Path:
+            Caminho encontrado para a pasta de dados processados.
+
+    Estrutura esperada principal:
+        Projeto/
+        ├── ExtracaoDados/
+        │   └── dados_processados/
+        └── Metricas/
+            └── MetricasDeEstruturaCoesao.py
+
+    Pastas alternativas verificadas:
+        - ExtracaoDados/dados_processados
+        - ExtracaoDados/DadosProcessados
+        - dados_processados
+        - Metricas/dados_processados
+
+    Exceções:
+        FileNotFoundError:
+            Gerada quando nenhuma das opções esperadas é encontrada.
+
+    Objetivo:
+        Permitir que o script seja executado diretamente sem exigir que o usuário
+        informe caminhos manualmente.
     """
     pasta_atual = Path(__file__).resolve().parent
     pasta_raiz = pasta_atual.parent
@@ -663,7 +1086,19 @@ def localizar_pasta_dados_processados():
 
 def localizar_pasta_saida():
     """
-    Define a pasta de saída das métricas dentro da própria pasta Metricas.
+    Define automaticamente a pasta onde os resultados serão salvos.
+
+    Parâmetros:
+        Nenhum.
+
+    Retorno:
+        pathlib.Path:
+            Caminho da pasta:
+            Metricas/saida_metricas/estrutura_coesao
+
+    Objetivo:
+        Manter os resultados desta história organizados dentro da pasta Metricas,
+        seguindo o padrão das demais métricas do projeto.
     """
     pasta_atual = Path(__file__).resolve().parent
     return pasta_atual / "saida_metricas" / "estrutura_coesao"
