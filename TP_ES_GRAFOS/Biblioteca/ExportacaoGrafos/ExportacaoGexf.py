@@ -338,7 +338,7 @@ class ExportacaoGexf:
             pesos_visuais[chave] = round(peso_visual, 4)
 
         return pesos_visuais
-    
+
     # Escrita do GEXF
 
     def _gerar_gexf(self, nome_grafo, vertices, arestas, tipo_relacao):

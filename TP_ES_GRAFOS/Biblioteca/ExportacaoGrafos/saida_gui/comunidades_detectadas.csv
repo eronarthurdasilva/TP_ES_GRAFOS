@@ -1,0 +1,15 @@
+nome_grafo;id_comunidade;tamanho;amostra_membros
+Grafo 1 - Comentários em issues e PRs;1;403;0xflotus, 331797832, 3m1n3nc3, 43081j, 8ctavio, Aareksio, AaronDewes, AaronSmithX, AbingLeo-ideahub, AdamBD
+Grafo 1 - Comentários em issues e PRs;2;7;AustinGil, imcm7, magne4000, maximilliangeorge, mirabledictu, mvrlin, steinathan
+Grafo 1 - Comentários em issues e PRs;3;7;Birleyici, Tarabass, becem-gharbi, cuebit, peterroe, platform-kit, titan-65
+Grafo 1 - Comentários em issues e PRs;4;6;Skwai, brunomoyse, chrisspiegl, dvanmali, sawa-ko, timb-103
+Grafo 1 - Comentários em issues e PRs;5;5;AloisSeckar, arpadgabor, cfab, mileo, robertorinaldi-dev
+Grafo 2 - Fechamentos de issues;1;97;3m1n3nc3, 8ctavio, Aareksio, AaronSmithX, AndreyYolkin, ArthurMJ96, BananaAcid, Barbapapazes, DavidDeSloovere, ElMatella
+Grafo 2 - Fechamentos de issues;2;3;Youhan, chadxz, nozomuikuta
+Grafo 2 - Fechamentos de issues;3;2;nandi95, renovate
+Grafo 3 - Reviews, aprovações e merges;1;158;3m1n3nc3, 87xie, 8ctavio, Aareksio, AmitGurbani, AndreyYolkin, Barbapapazes, BobbieGoede, ChangJoo-Park, CodeDredd
+Grafo 4 - Integrado;1;489;0xflotus, 331797832, 3m1n3nc3, 43081j, 87xie, 8ctavio, Aareksio, AaronDewes, AaronSmithX, AbingLeo-ideahub
+Grafo 4 - Integrado;2;7;Birleyici, Tarabass, becem-gharbi, cuebit, peterroe, platform-kit, titan-65
+Grafo 4 - Integrado;3;6;Skwai, brunomoyse, chrisspiegl, dvanmali, sawa-ko, timb-103
+Grafo 4 - Integrado;4;5;AloisSeckar, arpadgabor, cfab, mileo, robertorinaldi-dev
+Grafo 4 - Integrado;5;5;Caesarovich, ENBYSS, apparentvisuals, fabianwohlfart, hazadus
