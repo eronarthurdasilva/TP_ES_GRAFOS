@@ -3,7 +3,7 @@ import csv
 from pathlib import Path
 
 
-# ==========================================================
+
 # MÉTRICAS DE ESTRUTURA E COESÃO
 # 
 # Ele não usa bibliotecas de grafos, como NetworkX, igraph ou graph-tool.
@@ -20,7 +20,7 @@ from pathlib import Path
 # 2. Fechamentos de issues
 # 3. Reviews, aprovações e merges
 # 4. Integrado, combinação dos três anteriores
-# ==========================================================
+
 
 # LEITURA E NORMALIZAÇÃO DOS DADOS
 

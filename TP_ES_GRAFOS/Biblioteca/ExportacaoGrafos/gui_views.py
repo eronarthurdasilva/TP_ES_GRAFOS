@@ -18,9 +18,9 @@ facilitando a integração com o projeto atual.
 from gui_backend import executar_backend, arredondar
 
 
-# ==========================================================
+
 # FORMATAÇÃO BÁSICA
-# ==========================================================
+
 
 def formatar_valor(valor):
     """
@@ -112,9 +112,9 @@ def imprimir_subtitulo(texto):
     print("-" * 80)
 
 
-# ==========================================================
+
 # VIEWS DOS RESULTADOS
-# ==========================================================
+
 
 def mostrar_resumo_grafo(resultado_grafo):
     """

@@ -24,10 +24,7 @@ import json
 import csv
 from pathlib import Path
 
-
-# ==========================================================
 # CONFIGURAÇÃO DOS GRAFOS ESPERADOS
-# ==========================================================
 
 GRAFOS_CONFIG = {
     "comentarios": {
@@ -45,9 +42,9 @@ GRAFOS_CONFIG = {
 }
 
 
-# ==========================================================
+
 # LOCALIZAÇÃO DE PASTAS
-# ==========================================================
+
 
 def localizar_pasta_raiz():
     """
@@ -120,9 +117,9 @@ def localizar_pasta_saida():
     return Path(__file__).resolve().parent / "saida_gui"
 
 
-# ==========================================================
+
 # LEITURA E NORMALIZAÇÃO DOS DADOS
-# ==========================================================
+
 
 def carregar_json(caminho_arquivo):
     """
@@ -257,9 +254,9 @@ def normalizar_registro(registro):
     return origem, destino, converter_peso(peso)
 
 
-# ==========================================================
+
 # CONSTRUÇÃO INTERNA DO GRAFO
-# ==========================================================
+
 
 def construir_grafo(nome_grafo, registros, ignorar_auto_lacos=True):
     """
@@ -380,9 +377,9 @@ def montar_lista_adjacencia_nao_direcionada(vertices, arestas_nao_direcionadas):
     return adjacencia
 
 
-# ==========================================================
+
 # RESUMO DO GRAFO
-# ==========================================================
+
 
 def calcular_resumo_grafo(grafo):
     """
@@ -429,9 +426,9 @@ def calcular_resumo_grafo(grafo):
     }
 
 
-# ==========================================================
+
 # TOP-5 POR CENTRALIDADE
-# ==========================================================
+
 
 def calcular_centralidades_grau(grafo):
     """
@@ -514,9 +511,9 @@ def obter_top_5_centralidade(grafo):
     return calcular_centralidades_grau(grafo)[:5]
 
 
-# ==========================================================
+
 # COMUNIDADES DETECTADAS
-# ==========================================================
+
 
 def detectar_comunidades_label_propagation(grafo, max_iteracoes=20):
     """
@@ -632,9 +629,9 @@ def obter_resumo_comunidades(grafo, limite=5):
     return comunidades[:limite]
 
 
-# ==========================================================
+
 # MÉTRICAS JÁ GERADAS POR OUTROS ARQUIVOS
-# ==========================================================
+
 
 def carregar_metricas_estrutura_coesao_se_existir(pasta_raiz=None):
     """
@@ -681,9 +678,9 @@ def carregar_metricas_estrutura_coesao_se_existir(pasta_raiz=None):
     return metricas_por_nome
 
 
-# ==========================================================
+
 # ORQUESTRAÇÃO DO BACKEND
-# ==========================================================
+
 
 def carregar_grafos_processados(pasta_dados_processados):
     """
@@ -804,9 +801,9 @@ def executar_backend(pasta_dados_processados=None, pasta_saida=None):
     return resultado_final
 
 
-# ==========================================================
+
 # EXPORTAÇÃO DOS RESULTADOS DO BACKEND
-# ==========================================================
+
 
 def criar_pasta(caminho):
     """
