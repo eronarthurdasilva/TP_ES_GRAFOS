@@ -74,9 +74,7 @@ class ExportacaoGexf:
 
         self._mapeamento_cache = None
 
-    # ==========================================================
     # Caminhos e leitura de arquivos
-    # ==========================================================
 
     def _descobrir_arquivo_mapeamento(self):
         """Procura o arquivo de mapeamento em locais comuns."""
@@ -166,9 +164,7 @@ class ExportacaoGexf:
 
         return []
 
-    # ==========================================================
     # Normalização de interações para arestas
-    # ==========================================================
 
     def _pegar_primeiro_campo(self, item, nomes):
         """Busca o primeiro campo existente dentro do dicionário."""
@@ -291,9 +287,7 @@ class ExportacaoGexf:
 
         return vertices
 
-    # ==========================================================
     # Tratamento dos pesos para visualização no Gephi
-    # ==========================================================
 
     def _normalizar_pesos_para_gephi(self, arestas):
         """
@@ -344,10 +338,8 @@ class ExportacaoGexf:
             pesos_visuais[chave] = round(peso_visual, 4)
 
         return pesos_visuais
-
-    # ==========================================================
+    
     # Escrita do GEXF
-    # ==========================================================
 
     def _gerar_gexf(self, nome_grafo, vertices, arestas, tipo_relacao):
         """Gera o conteúdo textual do arquivo .gexf."""
@@ -414,9 +406,7 @@ class ExportacaoGexf:
             arquivo.write(conteudo)
         return caminho_saida
 
-    # ==========================================================
     # Métodos públicos
-    # ==========================================================
 
     def exportar_grafo_de_arquivo(self, nome_arquivo_json, nome_arquivo_saida, nome_grafo, tipo_relacao):
         """Exporta um grafo individual a partir de um JSON."""

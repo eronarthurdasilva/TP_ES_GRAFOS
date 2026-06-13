@@ -1,5 +1,4 @@
 AJUSTE PARA VISUALIZAÇÃO NO GEPHI
-=================================
 
 O problema de aparecer uma grande mancha/polígono cinza no Gephi normalmente
 acontece por dois motivos:
@@ -55,4 +54,4 @@ Usar pesos reais diretamente no campo weight:
 
     python ExportacaoGrafos/ExportacaoGexf.py --sem-normalizar-pesos
 
-Atenção: usar pesos reais pode fazer o Gephi voltar a mostrar arestas gigantes.
+OBS: usar pesos reais pode fazer o Gephi voltar a mostrar arestas gigantes.
