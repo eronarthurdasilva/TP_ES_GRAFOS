@@ -16,31 +16,31 @@ Observação:
 ----------------------------------------------------------------------
 Grafo 1 - Comentários em issues e PRs
 ----------------------------------------------------------------------
-Vértices: 6896
-Arestas direcionadas: 13522
-Arestas não direcionadas: 13192
-Peso total das interações: 68516.0
-Densidade direcionada: 0.000284
-Densidade não direcionada: 0.000555
-Coeficiente de aglomeração médio, todos os vértices: 0.195398
-Coeficiente de aglomeração médio, grau >= 2: 0.423598
-Assortatividade por grau: -0.181289
+Vértices: 527
+Arestas direcionadas: 853
+Arestas não direcionadas: 833
+Peso total das interações: 3802.0
+Densidade direcionada: 0.003077
+Densidade não direcionada: 0.00601
+Coeficiente de aglomeração médio, todos os vértices: 0.199514
+Coeficiente de aglomeração médio, grau >= 2: 0.459143
+Assortatividade por grau: -0.289248
 Interpretação da densidade: muito baixo
 Interpretação da aglomeração: alto
-Interpretação da assortatividade: levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados
+Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados
 
 ----------------------------------------------------------------------
 Grafo 2 - Fechamentos de issues
 ----------------------------------------------------------------------
-Vértices: 506
-Arestas direcionadas: 505
-Arestas não direcionadas: 505
-Peso total das interações: 2229.0
-Densidade direcionada: 0.001976
-Densidade não direcionada: 0.003953
-Coeficiente de aglomeração médio, todos os vértices: 0.003953
-Coeficiente de aglomeração médio, grau >= 2: 0.181819
-Assortatividade por grau: -0.88897
+Vértices: 102
+Arestas direcionadas: 100
+Arestas não direcionadas: 100
+Peso total das interações: 384.0
+Densidade direcionada: 0.009707
+Densidade não direcionada: 0.019414
+Coeficiente de aglomeração médio, todos os vértices: 0.0
+Coeficiente de aglomeração médio, grau >= 2: 0.0
+Assortatividade por grau: -0.943248
 Interpretação da densidade: muito baixo
 Interpretação da aglomeração: muito baixo
 Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados
@@ -48,31 +48,31 @@ Interpretação da assortatividade: negativa: colaboradores muito conectados ten
 ----------------------------------------------------------------------
 Grafo 3 - Reviews, aprovações e merges
 ----------------------------------------------------------------------
-Vértices: 719
-Arestas direcionadas: 845
-Arestas não direcionadas: 826
-Peso total das interações: 20384.0
-Densidade direcionada: 0.001637
-Densidade não direcionada: 0.0032
-Coeficiente de aglomeração médio, todos os vértices: 0.121201
-Coeficiente de aglomeração médio, grau >= 2: 0.738507
-Assortatividade por grau: -0.71137
+Vértices: 158
+Arestas direcionadas: 200
+Arestas não direcionadas: 197
+Peso total das interações: 3454.0
+Densidade direcionada: 0.008063
+Densidade não direcionada: 0.015883
+Coeficiente de aglomeração médio, todos os vértices: 0.219931
+Coeficiente de aglomeração médio, grau >= 2: 0.827359
+Assortatividade por grau: -0.626606
 Interpretação da densidade: muito baixo
-Interpretação da aglomeração: moderado
+Interpretação da aglomeração: alto
 Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados
 
 ----------------------------------------------------------------------
 Grafo 4 - Integrado
 ----------------------------------------------------------------------
-Vértices: 7010
-Arestas direcionadas: 13865
-Arestas não direcionadas: 13504
-Peso total das interações: 91129.0
-Densidade direcionada: 0.000282
-Densidade não direcionada: 0.00055
-Coeficiente de aglomeração médio, todos os vértices: 0.210759
-Coeficiente de aglomeração médio, grau >= 2: 0.449748
-Assortatividade por grau: -0.18772
+Vértices: 564
+Arestas direcionadas: 978
+Arestas não direcionadas: 952
+Peso total das interações: 7640.0
+Densidade direcionada: 0.00308
+Densidade não direcionada: 0.005996
+Coeficiente de aglomeração médio, todos os vértices: 0.275497
+Coeficiente de aglomeração médio, grau >= 2: 0.577622
+Assortatividade por grau: -0.305639
 Interpretação da densidade: muito baixo
 Interpretação da aglomeração: alto
-Interpretação da assortatividade: levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados
+Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados

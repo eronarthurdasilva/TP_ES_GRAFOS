@@ -1,0 +1,21 @@
+nome_grafo;posicao;usuario;grau_total;centralidade_grau;grau_entrada;grau_saida;grau_ponderado
+Grafo 1 - Comentários em issues e PRs;1;pi0;276;0.524715;48;247;1648.0
+Grafo 1 - Comentários em issues e PRs;2;codecov;95;0.180608;0;95;856.0
+Grafo 1 - Comentários em issues e PRs;3;coderabbitai;47;0.089354;0;47;230.0
+Grafo 1 - Comentários em issues e PRs;4;danielroe;35;0.06654;17;19;228.0
+Grafo 1 - Comentários em issues e PRs;5;productdevbook;32;0.060837;9;24;262.0
+Grafo 2 - Fechamentos de issues;1;pi0;97;0.960396;0;97;375.0
+Grafo 2 - Fechamentos de issues;2;nozomuikuta;3;0.029703;1;2;12.0
+Grafo 2 - Fechamentos de issues;3;Hebilicious;1;0.009901;1;0;18.0
+Grafo 2 - Fechamentos de issues;4;huseeiin;1;0.009901;1;0;15.0
+Grafo 2 - Fechamentos de issues;5;IlyaSemenov;1;0.009901;1;0;12.0
+Grafo 3 - Reviews, aprovações e merges;1;pi0;141;0.898089;3;141;3016.0
+Grafo 3 - Reviews, aprovações e merges;2;nozomuikuta;23;0.146497;4;19;326.0
+Grafo 3 - Reviews, aprovações e merges;3;danielroe;17;0.10828;1;17;450.0
+Grafo 3 - Reviews, aprovações e merges;4;Barbapapazes;8;0.050955;1;7;129.0
+Grafo 3 - Reviews, aprovações e merges;5;atinux;5;0.031847;1;4;49.0
+Grafo 4 - Integrado;1;pi0;352;0.625222;49;325;5039.0
+Grafo 4 - Integrado;2;codecov;95;0.168739;0;95;856.0
+Grafo 4 - Integrado;3;danielroe;47;0.083481;17;32;687.0
+Grafo 4 - Integrado;4;coderabbitai;47;0.083481;0;47;230.0
+Grafo 4 - Integrado;5;nozomuikuta;46;0.081705;7;40;462.0
