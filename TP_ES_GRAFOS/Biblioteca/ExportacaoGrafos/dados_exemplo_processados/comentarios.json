@@ -1,0 +1,6 @@
+[
+  {"de": "ana", "para": "bruno", "peso": 5},
+  {"de": "ana", "para": "carlos", "peso": 2},
+  {"de": "bruno", "para": "ana", "peso": 3},
+  {"de": "eduardo", "para": "ana", "peso": 1}
+]

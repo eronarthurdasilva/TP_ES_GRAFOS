@@ -1,0 +1,14 @@
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+venv/
+.env/
+.venv/
+
+saida_gexf/
+saida_gexf_exemplo/
+
+.DS_Store
+Thumbs.db
