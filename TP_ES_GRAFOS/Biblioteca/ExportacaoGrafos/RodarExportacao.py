@@ -1,10 +1,26 @@
 """RodarExportacao.py
+====================
 
 Arquivo principal para rodar a exportacao dos 4 grafos reais do trabalho.
 
 Como usar, a partir da pasta raiz do projeto:
     python ExportacaoGrafos/RodarExportacao.py
 
+ou, no Windows:
+    py ExportacaoGrafos/RodarExportacao.py
+
+Estrutura esperada:
+    Projeto/
+    ├── ConstrucaoGrafos/
+    │   └── mapeamento_vertices.json
+    ├── ExtracaoDados/
+    │   └── dados_processados/
+    │       ├── comentarios.json
+    │       ├── fechamentos.json
+    │       └── reviews_merges.json
+    └── ExportacaoGrafos/
+        ├── ExportacaoGexf.py
+        └── RodarExportacao.py
 """
 
 from ExportacaoGexf import ExportacaoGexf

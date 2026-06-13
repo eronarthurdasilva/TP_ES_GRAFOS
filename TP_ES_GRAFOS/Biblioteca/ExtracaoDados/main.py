@@ -15,12 +15,32 @@ from extracao_de_dados import ExtracaoDados
 from MapeamentoVertices import gerar_mapeamento_vertices
 from Construcao import Construcao
 
-def main(process_only: bool = False, force: bool = False):
-    """Executa a extração, atualiza o mapeamento e devolve os dois grafos prontos."""
+# Configurações dos repositórios disponíveis
+REPOSITORIOS = {
+    "h3": {"owner": "h3js", "repo": "h3"},
+    "hyprland": {"owner": "hyprwm", "repo": "Hyprland"},
+}
+
+def main(process_only: bool = False, force: bool = False, repo: str = "h3"):
+    """Executa a extração, atualiza o mapeamento e devolve os dois grafos prontos.
+    
+    Args:
+        process_only: Se True, apenas processa JSONs existentes.
+        force: Se True, força nova coleta mesmo se JSONs existem.
+        repo: Nome do repositório ('h3' ou 'hyprland').
+    """
+    if repo not in REPOSITORIOS:
+        raise ValueError(f"Repositório desconhecido: {repo}. Opções: {list(REPOSITORIOS.keys())}")
+    
+    config = REPOSITORIOS[repo]
+    os.environ["GITHUB_OWNER"] = config["owner"]
+    os.environ["GITHUB_REPO"] = config["repo"]
+    
     base_dir = Path(__file__).resolve().parent
     dados_processados = base_dir / "dados_processados"
     mapeamento_saida = base_dir.parent / "ConstrucaoGrafos" / "mapeamento_vertices.json"
 
+    print(f"Usando repositório: {config['owner']}/{config['repo']}")
     extrator = ExtracaoDados()
     extrator.run(process_only=process_only, force=force)
 
@@ -36,6 +56,13 @@ def main(process_only: bool = False, force: bool = False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Coleta e processa dados do GitHub")
     parser.add_argument(
+        "--repo",
+        "-r",
+        choices=list(REPOSITORIOS.keys()),
+        default="h3",
+        help="Repositório a analisar (padrão: h3).",
+    )
+    parser.add_argument(
         "--process-only",
         "-p",
         action="store_true",
@@ -49,7 +76,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    grafo_lista, grafo_matriz = main(process_only=args.process_only, force=args.force)
+    grafo_lista, grafo_matriz = main(process_only=args.process_only, force=args.force, repo=args.repo)
     print(
         f"Grafo em lista: {grafo_lista.getVertexCount()} vertices, {grafo_lista.getEdgeCount()} arestas"
     )
