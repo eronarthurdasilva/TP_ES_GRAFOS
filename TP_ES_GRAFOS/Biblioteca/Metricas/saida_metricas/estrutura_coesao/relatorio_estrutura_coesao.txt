@@ -1,0 +1,78 @@
+MÉTRICAS DE ESTRUTURA E COESÃO
+======================================================================
+
+Métricas calculadas sem bibliotecas de grafos.
+Representação interna utilizada: conjuntos e dicionários do Python.
+
+Métricas:
+1. Densidade da rede
+2. Coeficiente de aglomeração, clustering coefficient
+3. Assortatividade por grau
+
+Observação:
+- A densidade direcionada considera origem -> destino.
+- O clustering e a assortatividade foram calculados na versão não direcionada do grafo.
+
+----------------------------------------------------------------------
+Grafo 1 - Comentários em issues e PRs
+----------------------------------------------------------------------
+Vértices: 6896
+Arestas direcionadas: 13522
+Arestas não direcionadas: 13192
+Peso total das interações: 68516.0
+Densidade direcionada: 0.000284
+Densidade não direcionada: 0.000555
+Coeficiente de aglomeração médio, todos os vértices: 0.195398
+Coeficiente de aglomeração médio, grau >= 2: 0.423598
+Assortatividade por grau: -0.181289
+Interpretação da densidade: muito baixo
+Interpretação da aglomeração: alto
+Interpretação da assortatividade: levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados
+
+----------------------------------------------------------------------
+Grafo 2 - Fechamentos de issues
+----------------------------------------------------------------------
+Vértices: 506
+Arestas direcionadas: 505
+Arestas não direcionadas: 505
+Peso total das interações: 2229.0
+Densidade direcionada: 0.001976
+Densidade não direcionada: 0.003953
+Coeficiente de aglomeração médio, todos os vértices: 0.003953
+Coeficiente de aglomeração médio, grau >= 2: 0.181819
+Assortatividade por grau: -0.88897
+Interpretação da densidade: muito baixo
+Interpretação da aglomeração: muito baixo
+Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados
+
+----------------------------------------------------------------------
+Grafo 3 - Reviews, aprovações e merges
+----------------------------------------------------------------------
+Vértices: 719
+Arestas direcionadas: 845
+Arestas não direcionadas: 826
+Peso total das interações: 20384.0
+Densidade direcionada: 0.001637
+Densidade não direcionada: 0.0032
+Coeficiente de aglomeração médio, todos os vértices: 0.121201
+Coeficiente de aglomeração médio, grau >= 2: 0.738507
+Assortatividade por grau: -0.71137
+Interpretação da densidade: muito baixo
+Interpretação da aglomeração: moderado
+Interpretação da assortatividade: negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados
+
+----------------------------------------------------------------------
+Grafo 4 - Integrado
+----------------------------------------------------------------------
+Vértices: 7010
+Arestas direcionadas: 13865
+Arestas não direcionadas: 13504
+Peso total das interações: 91129.0
+Densidade direcionada: 0.000282
+Densidade não direcionada: 0.00055
+Coeficiente de aglomeração médio, todos os vértices: 0.210759
+Coeficiente de aglomeração médio, grau >= 2: 0.449748
+Assortatividade por grau: -0.18772
+Interpretação da densidade: muito baixo
+Interpretação da aglomeração: alto
+Interpretação da assortatividade: levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados

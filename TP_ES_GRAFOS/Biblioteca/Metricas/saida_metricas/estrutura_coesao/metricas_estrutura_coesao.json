@@ -1,0 +1,62 @@
+[
+    {
+        "nome_grafo": "Grafo 1 - Comentários em issues e PRs",
+        "quantidade_vertices": 6896,
+        "quantidade_arestas_direcionadas": 13522,
+        "quantidade_arestas_nao_direcionadas": 13192,
+        "peso_total_interacoes": 68516.0,
+        "densidade_direcionada": 0.0002843867828498071,
+        "densidade_nao_direcionada": 0.0005548928323257883,
+        "coeficiente_aglomeracao_medio_todos_vertices": 0.19539795444312,
+        "coeficiente_aglomeracao_medio_grau_maior_igual_2": 0.4235977031876,
+        "assortatividade_por_grau": -0.18128865911630385,
+        "interpretacao_densidade": "muito baixo",
+        "interpretacao_aglomeracao": "alto",
+        "interpretacao_assortatividade": "levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados"
+    },
+    {
+        "nome_grafo": "Grafo 2 - Fechamentos de issues",
+        "quantidade_vertices": 506,
+        "quantidade_arestas_direcionadas": 505,
+        "quantidade_arestas_nao_direcionadas": 505,
+        "peso_total_interacoes": 2229.0,
+        "densidade_direcionada": 0.001976284584980237,
+        "densidade_nao_direcionada": 0.003952569169960474,
+        "coeficiente_aglomeracao_medio_todos_vertices": 0.003952586874161795,
+        "coeficiente_aglomeracao_medio_grau_maior_igual_2": 0.18181899621144257,
+        "assortatividade_por_grau": -0.888969502111995,
+        "interpretacao_densidade": "muito baixo",
+        "interpretacao_aglomeracao": "muito baixo",
+        "interpretacao_assortatividade": "negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados"
+    },
+    {
+        "nome_grafo": "Grafo 3 - Reviews, aprovações e merges",
+        "quantidade_vertices": 719,
+        "quantidade_arestas_direcionadas": 845,
+        "quantidade_arestas_nao_direcionadas": 826,
+        "peso_total_interacoes": 20384.0,
+        "densidade_direcionada": 0.0016368292390003137,
+        "densidade_nao_direcionada": 0.003200049589146176,
+        "coeficiente_aglomeracao_medio_todos_vertices": 0.12120135362800603,
+        "coeficiente_aglomeracao_medio_grau_maior_igual_2": 0.7385065530384436,
+        "assortatividade_por_grau": -0.7113697974522767,
+        "interpretacao_densidade": "muito baixo",
+        "interpretacao_aglomeracao": "moderado",
+        "interpretacao_assortatividade": "negativa: colaboradores muito conectados tendem a interagir com colaboradores menos conectados"
+    },
+    {
+        "nome_grafo": "Grafo 4 - Integrado",
+        "quantidade_vertices": 7010,
+        "quantidade_arestas_direcionadas": 13865,
+        "quantidade_arestas_nao_direcionadas": 13504,
+        "peso_total_interacoes": 91129.0,
+        "densidade_direcionada": 0.00028219271370882637,
+        "densidade_nao_direcionada": 0.0005496906463648022,
+        "coeficiente_aglomeracao_medio_todos_vertices": 0.21075929817427003,
+        "coeficiente_aglomeracao_medio_grau_maior_igual_2": 0.4497481522683814,
+        "assortatividade_por_grau": -0.18771993969437045,
+        "interpretacao_densidade": "muito baixo",
+        "interpretacao_aglomeracao": "alto",
+        "interpretacao_assortatividade": "levemente negativa: colaboradores muito conectados tendem a interagir um pouco mais com menos conectados"
+    }
+]
