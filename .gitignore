@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+venv/
+.env/
+.venv/
+
+# Saídas geradas
+saida_gexf/
+saida_gexf_exemplo/
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db
