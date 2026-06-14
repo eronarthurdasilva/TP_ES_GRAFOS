@@ -1,0 +1,5 @@
+nome_grafo;quantidade_vertices;quantidade_arestas_direcionadas;quantidade_arestas_nao_direcionadas;peso_total_interacoes;densidade_direcionada;densidade_nao_direcionada
+Grafo 1 - Comentários em issues e PRs;527;853;833;3802.0;0.003077;0.00601
+Grafo 2 - Fechamentos de issues;102;100;100;384.0;0.009707;0.019414
+Grafo 3 - Reviews, aprovações e merges;158;200;197;3454.0;0.008063;0.015883
+Grafo 4 - Integrado;564;978;952;7640.0;0.00308;0.005996
