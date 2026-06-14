@@ -1,0 +1,4502 @@
+[
+  {
+    "de": "pi0",
+    "para": "mstaack",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "mstaack",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "farnabaz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "farnabaz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "farnabaz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "ChangJoo-Park",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ChangJoo-Park",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ChangJoo-Park",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ChangJoo-Park",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ChangJoo-Park",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "antfu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "antfu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "antfu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "wobsoriano",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "danielroe",
+    "para": "wobsoriano",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "soub4i",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "dargmuesli",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "triandamai",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "triandamai",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "stafyniaksacha",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "atinux",
+    "para": "harlan-zw",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "harlan-zw",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "harlan-zw",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "seho-dev",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ali-master",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Jclong98",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "seho-dev",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "antfu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "antfu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "rinsuki",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "lnbin",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "lnbin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "antfu",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kevinmarrec",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sisou",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sisou",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Shahriar-Rahi",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Shahriar-Rahi",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "chmking",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "chmking",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "TheAlexLichter",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "danielroe",
+    "para": "TheAlexLichter",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "TheAlexLichter",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "TheAlexLichter",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "chrisbbreuer",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "chrisbbreuer",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "tobiasdiez",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "tobiasdiez",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "nmathew98",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nmathew98",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nmathew98",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "wobsoriano",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "wobsoriano",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "L422Y",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "L422Y",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "L422Y",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "tobiasdiez",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "tobiasdiez",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nopeless",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "RyanFrantz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "RyanFrantz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "enkot",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "enkot",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ytjmt",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "meixger",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "meixger",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "zhiyuanzmj",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "zhiyuanzmj",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "brc-dd",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "ytjmt",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ytjmt",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "ytjmt",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ytjmt",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "oleghalin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "maou-shonen",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "maou-shonen",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "atinux",
+    "para": "icarusgk",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "johannschopplich",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "enkot",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "enkot",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iainsproat",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "rijkvanzanten",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "atinux",
+    "para": "rijkvanzanten",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "maou-shonen",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "maou-shonen",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "cerinoligutom",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "cerinoligutom",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "atinux",
+    "para": "igorjacauna",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "igorjacauna",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "igorjacauna",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Hebilicious",
+    "para": "zhiyuanzmj",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "zhiyuanzmj",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "zhiyuanzmj",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Hebilicious",
+    "para": "jd1378",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "Hebilicious",
+    "para": "jd1378",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "jd1378",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "jd1378",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "vushe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "vushe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Ngob",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "emilsgulbis",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "emilsgulbis",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Aareksio",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Aareksio",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Aareksio",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Hebilicious",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "edimitchel",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "edimitchel",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "edimitchel",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Intevel",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Intevel",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iainsproat",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iainsproat",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "harlan-zw",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "harlan-zw",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Aareksio",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Aareksio",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "CodeDredd",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "CodeDredd",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "michealroberts",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "michealroberts",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nandi95",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "danielroe",
+    "para": "nandi95",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "renovate",
+    "para": "nandi95",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "HigherOrderLogic",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "HigherOrderLogic",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kazupon",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kazupon",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nandi95",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nandi95",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "DamianGlowala",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "TheAlexLichter",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "TheAlexLichter",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "wolodev",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "wolodev",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "DamianGlowala",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "joshmossas",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "BobbieGoede",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "BobbieGoede",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "unite4",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "unite4",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "dargmuesli",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "dargmuesli",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "JAD3N",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "JAD3N",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "oscartbeaumont",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "oscartbeaumont",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "GalacticHypernova",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "stafyniaksacha",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "stafyniaksacha",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "passionate-bram",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "passionate-bram",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "meirlamdan",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "meirlamdan",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "meirlamdan",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "kohasummons",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kohasummons",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kohasummons",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "cernymatej",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "cernymatej",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "cernymatej",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "markthree",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "markthree",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "AmitGurbani",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "AmitGurbani",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "AmitGurbani",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "noook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "noook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Barbapapazes",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "fredimitchel",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "fredimitchel",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "frenzzy",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "frenzzy",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "zauni",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "zauni",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "MathieuDerelle",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "joshmossas",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "joshmossas",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Lmmmmmm-bb",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Lmmmmmm-bb",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Barbapapazes",
+    "para": "etroynov",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "etroynov",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "TheAlexLichter",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "TheAlexLichter",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "kongmoumou",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kongmoumou",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Shyam-Chen",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "dethdkn",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "dethdkn",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "TorstenDittmann",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "TorstenDittmann",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "devseckobz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "devseckobz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Eckhardt-D",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Eckhardt-D",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "IsraelOrtuno",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "IsraelOrtuno",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "dgxo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "dgxo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "TheAlexLichter",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "TheAlexLichter",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "jolo-dev",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "jolo-dev",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "imslepov",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "imslepov",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "nozomuikuta",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nozomuikuta",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ymansurozer",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ymansurozer",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "gutenye",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "gutenye",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielroe",
+    "para": "TorstenDittmann",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "TorstenDittmann",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "TorstenDittmann",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "xjccc",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "xjccc",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "jerelmiller",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "jerelmiller",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "lborgav",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "lborgav",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "HigherOrderLogic",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "jordypereira",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "jordypereira",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "typed-sigterm",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "hrynevychroman",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aaharu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "OhB00",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "OhB00",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Shhu",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "phoenix-ru",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "phoenix-ru",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "JianJroh",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "JianJroh",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "AndreyYolkin",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "AndreyYolkin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "gulshan",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "gulshan",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "danielrentz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielrentz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Maxttier",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Maxttier",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Maxttier",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "cjpearson",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "cjpearson",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kanonji",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kanonji",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kanonji",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "kanonji",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "chadxz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "chadxz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "patak-cat",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "patak-cat",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "OmarMAttia7",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "OmarMAttia7",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "brc-dd",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "brc-dd",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "XiNiHa",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "XiNiHa",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Ingramz",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Ingramz",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "cjpearson",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Youhan",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "Youhan",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "ysknsid25",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "maximepvrt",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "maximepvrt",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Narixius",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Narixius",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "nozomuikuta",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "zsilbi",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "BobbieGoede",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "teleskop150750",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "teleskop150750",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kspace-trk",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "productdevbook",
+    "para": "pi0",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "markthree",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "markthree",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "DavidDeSloovere",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "DavidDeSloovere",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "izoukhai",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "septatrix",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "itssimon",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "itssimon",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "wuiyang",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "ckvv",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "87xie",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "87xie",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "outslept",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "outslept",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "OskarLebuda",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "OskarLebuda",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "OskarLebuda",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "IlyaSemenov",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "IlyaSemenov",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "HugoMuller",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "HugoMuller",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "randName",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "randName",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "randName",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "randName",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "luxass",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "luxass",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "atinux",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "homersimpsons",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "homersimpsons",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "wvovaw",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "wvovaw",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "rijkvanzanten",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "rijkvanzanten",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "bombur51",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "bombur51",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "teleskop150750",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "teleskop150750",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "Kinfe123",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aquapi",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "aquapi",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "iiio2",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "3m1n3nc3",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "3m1n3nc3",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "dardanbujupaj",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "dardanbujupaj",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kazupon",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kazupon",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "logaretm",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "logaretm",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "amondnet",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "huseeiin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "renovate",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "kricsleo",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "imslepov",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "imslepov",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "logaretm",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "8ctavio",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "8ctavio",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "8ctavio",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "3m1n3nc3",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "3m1n3nc3",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sandros94",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "terminalchai",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "terminalchai",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "danielkellyio",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "productdevbook",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "productdevbook",
+    "para": "nickspaargaren",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nickspaargaren",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nickspaargaren",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nickspaargaren",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "Sn0wye",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Sn0wye",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "nickspaargaren",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "nickspaargaren",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "sergioazoc",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "sergioazoc",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "scutuatua-crypto",
+    "para": "renovate",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "Drackin",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "logaretm",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "logaretm",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "onmax",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "onmax",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "dyeske61283",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "dyeske61283",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "aprovacao",
+    "peso": 4
+  },
+  {
+    "de": "pi0",
+    "para": "danielroe",
+    "tipo": "merge",
+    "peso": 5
+  },
+  {
+    "de": "pi0",
+    "para": "casper-lindh",
+    "tipo": "merge",
+    "peso": 5
+  }
+]

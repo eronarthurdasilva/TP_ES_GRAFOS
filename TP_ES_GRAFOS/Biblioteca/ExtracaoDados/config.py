@@ -45,8 +45,11 @@ for _env_file in ENV_FILES:
 
 # Credenciais e identificadores do repositório que serão usados na extração.
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
-GITHUB_REPO = os.getenv("GITHUB_REPO", "").strip()
-GITHUB_OWNER = os.getenv("GITHUB_OWNER", "").strip()
+
+REPOSITORIOS = {
+    "h3": {"owner": "h3js", "repo": "h3"},
+    "hyprland": {"owner": "hyprwm", "repo": "Hyprland"},
+}
 
 # Diretório deste módulo e caminhos de saída para os dados coletados.
 BASE_DIR = Path(__file__).resolve().parent
@@ -57,15 +60,36 @@ DADOS_PROC = BASE_DIR / "dados_processados"
 DADOS_BRUTOS.mkdir(parents=True, exist_ok=True)
 DADOS_PROC.mkdir(parents=True, exist_ok=True)
 
-# Verifica rapidamente se todas as variáveis obrigatórias foram carregadas.
-_obrigatorias = {
-    "GITHUB_TOKEN": GITHUB_TOKEN,
-    "GITHUB_OWNER": GITHUB_OWNER,
-    "GITHUB_REPO": GITHUB_REPO,
-}
-for _nome, _valor in _obrigatorias.items():
-    if not _valor:
-        raise RuntimeError(f"{_nome} não encontrado ou vazio no .env")
+def obter_config_repositorio(repo_slug: str) -> dict:
+    """Retorna owner e repo do repositório informado."""
+    if repo_slug not in REPOSITORIOS:
+        raise ValueError(f"Repositório desconhecido: {repo_slug}. Opções: {list(REPOSITORIOS.keys())}")
+
+    return REPOSITORIOS[repo_slug]
+
+
+def obter_diretorios_dados(repo_slug: str) -> tuple[Path, Path]:
+    """Retorna os diretórios de bruto e processado para o repositório."""
+    if repo_slug == "h3":
+        bruto = DADOS_BRUTOS
+        processado = DADOS_PROC
+    else:
+        bruto = DADOS_BRUTOS / repo_slug
+        processado = DADOS_PROC / repo_slug
+
+    bruto.mkdir(parents=True, exist_ok=True)
+    processado.mkdir(parents=True, exist_ok=True)
+    return bruto, processado
+
+
+def obter_caminho_mapeamento(repo_slug: str) -> Path:
+    """Retorna o arquivo de mapeamento de vértices para o repositório."""
+    base_mapeamento = BASE_DIR.parent / "ConstrucaoGrafos"
+
+    if repo_slug == "h3":
+        return base_mapeamento / "mapeamento_vertices.json"
+
+    return base_mapeamento / f"mapeamento_vertices_{repo_slug}.json"
 
 if GITHUB_TOKEN == "your_personal_access_token":
     raise RuntimeError(
@@ -76,8 +100,10 @@ if GITHUB_TOKEN == "your_personal_access_token":
 # Exportações explícitas do módulo para facilitar imports.
 __all__ = [
     "GITHUB_TOKEN",
-    "GITHUB_REPO",
-    "GITHUB_OWNER",
+    "REPOSITORIOS",
     "DADOS_BRUTOS",
     "DADOS_PROC",
+    "obter_config_repositorio",
+    "obter_diretorios_dados",
+    "obter_caminho_mapeamento",
 ]

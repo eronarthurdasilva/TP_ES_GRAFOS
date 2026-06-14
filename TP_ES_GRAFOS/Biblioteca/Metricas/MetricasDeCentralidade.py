@@ -133,6 +133,9 @@ class MetricasDeCentralidade:
                 
                 # Verifica todos os vizinhos de v
                 for w in range(self.n):
+                    if w == v:
+                        continue
+
                     if self.grafo.hasEdge(v, w):
                         # Aresta v → w existe
                         
@@ -222,6 +225,9 @@ class MetricasDeCentralidade:
                 v = queue.popleft()
  
                 for w in range(self.n):
+                    if w == v:
+                        continue
+
                     if self.grafo.hasEdge(v, w) and dist[w] == float('inf'):
                         dist[w] = dist[v] + 1
                         queue.append(w)
@@ -308,6 +314,9 @@ class MetricasDeCentralidade:
  
                 # Para cada vértice de destino v
                 for v in range(self.n):
+                    if v == u:
+                        continue
+
                     if self.grafo.hasEdge(u, v):
                         # u aponta para v
                         # Contribui uma fração do PR de u

@@ -1,0 +1,2872 @@
+{
+  "num_vertices": 564,
+  "num_arestas_nao_direcionadas": 952,
+  "num_comunidades": 51,
+  "comunidades": [
+    {
+      "id": 19,
+      "tamanho": 61,
+      "membros": [
+        "AbingLeo-ideahub",
+        "AmitGurbani",
+        "BananaAcid",
+        "Barbapapazes",
+        "ENBYSS",
+        "IlyaSemenov",
+        "MarioC3",
+        "P4sca1",
+        "PatSosna",
+        "T1B0",
+        "TheAlexLichter",
+        "ThomasBerne",
+        "angelhdzmultimedia",
+        "ashutosh887",
+        "atinux",
+        "awhiteside1",
+        "cerinoligutom",
+        "cernymatej",
+        "chrber04",
+        "chrisnoden",
+        "cloudflare-workers-and-pages",
+        "codecov-commenter",
+        "cpreston321",
+        "dardanbujupaj",
+        "etroynov",
+        "farnabaz",
+        "fredimitchel",
+        "hidekatsu-izuno",
+        "icarusgk",
+        "igorjacauna",
+        "jolo-dev",
+        "kohasummons",
+        "luca-smartpricing",
+        "maciej-jezierski",
+        "manuel-84",
+        "marr",
+        "meirlamdan",
+        "milos018",
+        "mnlght03",
+        "mynameisjeffe",
+        "nopeless",
+        "notshekhar",
+        "rafaeldsousa",
+        "rafaelragib",
+        "richardeschloss",
+        "rijkvanzanten",
+        "sdtime-io",
+        "shtse8",
+        "sisou",
+        "so1ve",
+        "soub4i",
+        "taksugit",
+        "thetejasmagade",
+        "they-cloned-me",
+        "tobiasdiez",
+        "vinnitu",
+        "vuletuanbt",
+        "wangweiji1006",
+        "xhebox",
+        "zelid",
+        "zusorio"
+      ]
+    },
+    {
+      "id": 60,
+      "tamanho": 23,
+      "membros": [
+        "Caesarovich",
+        "Hebilicious",
+        "JCtapuk",
+        "JamieCurnow",
+        "apparentvisuals",
+        "aquapi",
+        "decs",
+        "efraimbart",
+        "fabianwohlfart",
+        "franklin-tina",
+        "githubnikola",
+        "glensc",
+        "hazadus",
+        "jd1378",
+        "jontybrook",
+        "lewebsimple",
+        "martinszeltins",
+        "moyukingS",
+        "oom-",
+        "qin-guan",
+        "redbar0n",
+        "renhiyama",
+        "zhiyuanzmj"
+      ]
+    },
+    {
+      "id": 78,
+      "tamanho": 2,
+      "membros": [
+        "Harm-Nullix",
+        "MarijnMensinga"
+      ]
+    },
+    {
+      "id": 89,
+      "tamanho": 6,
+      "membros": [
+        "GuppyTheCat",
+        "NikhilVerma",
+        "moshetanzer",
+        "paranoidPhantom",
+        "quentindutot",
+        "s3xysteak"
+      ]
+    },
+    {
+      "id": 104,
+      "tamanho": 2,
+      "membros": [
+        "Mokkapps",
+        "PunkPengu"
+      ]
+    },
+    {
+      "id": 108,
+      "tamanho": 4,
+      "membros": [
+        "DylanThomasFr",
+        "RihanArfan",
+        "Siilwyn",
+        "tschni"
+      ]
+    },
+    {
+      "id": 125,
+      "tamanho": 5,
+      "membros": [
+        "Birleyici",
+        "Tarabass",
+        "ceodevforce",
+        "peterroe",
+        "titan-65"
+      ]
+    },
+    {
+      "id": 139,
+      "tamanho": 4,
+      "membros": [
+        "ChangJoo-Park",
+        "Zac-Zajdel",
+        "codecov-io",
+        "tobychidi-zz"
+      ]
+    },
+    {
+      "id": 142,
+      "tamanho": 2,
+      "membros": [
+        "BayBreezy",
+        "achou11"
+      ]
+    },
+    {
+      "id": 143,
+      "tamanho": 7,
+      "membros": [
+        "HendrikJan",
+        "IqroNegoro",
+        "acidjazz",
+        "alifnuryana",
+        "kentntwari",
+        "lborgav",
+        "offizium-berndstorath"
+      ]
+    },
+    {
+      "id": 144,
+      "tamanho": 7,
+      "membros": [
+        "WongSaang",
+        "adamdehaven",
+        "eljass",
+        "lenqwang",
+        "migueabellan",
+        "ramazansancar",
+        "tjhiggins"
+      ]
+    },
+    {
+      "id": 145,
+      "tamanho": 3,
+      "membros": [
+        "Markovka-N",
+        "afonsosantos",
+        "hecktarzuli"
+      ]
+    },
+    {
+      "id": 149,
+      "tamanho": 7,
+      "membros": [
+        "StevenPewsey",
+        "agrohs",
+        "ahoiroman",
+        "brc-dd",
+        "danielkuzela",
+        "gzf6",
+        "titouanmathis"
+      ]
+    },
+    {
+      "id": 156,
+      "tamanho": 2,
+      "membros": [
+        "Achrou",
+        "altryne"
+      ]
+    },
+    {
+      "id": 157,
+      "tamanho": 3,
+      "membros": [
+        "Rednas83",
+        "amondnet",
+        "bobfw"
+      ]
+    },
+    {
+      "id": 158,
+      "tamanho": 2,
+      "membros": [
+        "HomWang",
+        "andrewdleach"
+      ]
+    },
+    {
+      "id": 164,
+      "tamanho": 4,
+      "membros": [
+        "Rigo-m",
+        "antfu",
+        "chrisxvin",
+        "replygirl"
+      ]
+    },
+    {
+      "id": 183,
+      "tamanho": 2,
+      "membros": [
+        "aaharu",
+        "benlavalley"
+      ]
+    },
+    {
+      "id": 184,
+      "tamanho": 4,
+      "membros": [
+        "BenGoetemann",
+        "besscroft",
+        "fadeaway",
+        "yocheved"
+      ]
+    },
+    {
+      "id": 190,
+      "tamanho": 5,
+      "membros": [
+        "Urriel",
+        "bitbytebit1",
+        "chenneil69",
+        "rmarquet21",
+        "victorpagan"
+      ]
+    },
+    {
+      "id": 196,
+      "tamanho": 4,
+      "membros": [
+        "Kylyi",
+        "Moonlight63",
+        "brunohstein",
+        "ilyasturki"
+      ]
+    },
+    {
+      "id": 209,
+      "tamanho": 3,
+      "membros": [
+        "MarcTroll",
+        "divyam234",
+        "redstonekasi"
+      ]
+    },
+    {
+      "id": 227,
+      "tamanho": 3,
+      "membros": [
+        "NukeJS",
+        "clopezpro",
+        "mengdu"
+      ]
+    },
+    {
+      "id": 229,
+      "tamanho": 122,
+      "membros": [
+        "Aareksio",
+        "Baroshem",
+        "BobbieGoede",
+        "CodeDredd",
+        "DamianGlowala",
+        "DavidDeSloovere",
+        "Eckhardt-D",
+        "ElMatella",
+        "GalacticHypernova",
+        "HigherOrderLogic",
+        "HugoMuller",
+        "Ingramz",
+        "JAD3N",
+        "JianJroh",
+        "KamcyAhaka",
+        "L422Y",
+        "Lmmmmmm-bb",
+        "Maxttier",
+        "Narixius",
+        "Ngob",
+        "OmarMAttia7",
+        "RyanFrantz",
+        "SegaraRai",
+        "Shahriar-Rahi",
+        "Shhu",
+        "Shyam-Chen",
+        "T-x-T",
+        "TimGuendel",
+        "TorstenDittmann",
+        "XiNiHa",
+        "Youhan",
+        "agracia-foticos",
+        "alphaelf",
+        "andysay",
+        "aspitrine",
+        "carcinocron",
+        "catfishlty",
+        "cawa-93",
+        "chadxz",
+        "chrisbbreuer",
+        "christianklauss",
+        "cjpearson",
+        "ckvv",
+        "codecov",
+        "csvwolf",
+        "danielrentz",
+        "danielroe",
+        "dargmuesli",
+        "devseckobz",
+        "devunt",
+        "dgxo",
+        "donywan",
+        "edimitchel",
+        "edivados",
+        "eduardosada",
+        "educkf",
+        "emilsgulbis",
+        "enkot",
+        "frenzzy",
+        "gulshan",
+        "hajime9652",
+        "harlan-zw",
+        "homersimpsons",
+        "iainsproat",
+        "iiio2",
+        "ijkml",
+        "imcm7",
+        "itssimon",
+        "jerelmiller",
+        "johannschopplich",
+        "jordypereira",
+        "joshvr27",
+        "julie-ng",
+        "kanonji",
+        "katywings",
+        "kazupon",
+        "kevinmarrec",
+        "kongmoumou",
+        "luxass",
+        "m0ksem",
+        "maicWorkGithub",
+        "maicss",
+        "markbrockhoff",
+        "mei23",
+        "meixger",
+        "melbourne2991",
+        "mik7up",
+        "nandi95",
+        "natemate90",
+        "nathanchase",
+        "nick-w-nick",
+        "nmathew98",
+        "nooooooooooooooon",
+        "nozomuikuta",
+        "oleghalin",
+        "oscartbeaumont",
+        "outslept",
+        "patak-cat",
+        "paulvonber",
+        "pavloniym",
+        "qnp",
+        "ramsesgarate",
+        "randName",
+        "renovate",
+        "rrd108",
+        "scutuatua-crypto",
+        "septatrix",
+        "silvercent011",
+        "snrmwg",
+        "space-otter",
+        "sppmstar",
+        "stafyniaksacha",
+        "szheleshchenko",
+        "triandamai",
+        "unite4",
+        "wobsoriano",
+        "wolodev",
+        "wuiyang",
+        "xjccc",
+        "ysknsid25",
+        "ytjmt",
+        "zach-at-healthpilot"
+      ]
+    },
+    {
+      "id": 232,
+      "tamanho": 34,
+      "membros": [
+        "3m1n3nc3",
+        "8ctavio",
+        "Aimee1608",
+        "Bojun-Vvibe",
+        "Drackin",
+        "HugoRCD",
+        "LeSingh1",
+        "LikiosSedo",
+        "Michealjunior",
+        "Sn0wye",
+        "ahmetguness",
+        "alan747271363-art",
+        "birkskyum",
+        "casper-lindh",
+        "ccai40359-wq",
+        "coderabbitai",
+        "davidz627",
+        "dyeske61283",
+        "francisjohnjohnston-web",
+        "harshagarwalnyu",
+        "imslepov",
+        "leno23",
+        "logaretm",
+        "mixelburg",
+        "nickspaargaren",
+        "onmax",
+        "pkg-pr-new",
+        "pupuking723",
+        "ruguoba",
+        "sergioazoc",
+        "terminalchai",
+        "thisismairaj",
+        "trivikr",
+        "typed-sigterm"
+      ]
+    },
+    {
+      "id": 258,
+      "tamanho": 6,
+      "membros": [
+        "Skwai",
+        "brunomoyse",
+        "chrisspiegl",
+        "dvanmali",
+        "sawa-ko",
+        "timb-103"
+      ]
+    },
+    {
+      "id": 277,
+      "tamanho": 9,
+      "membros": [
+        "Lyokolux",
+        "a-toms",
+        "bfg-coding",
+        "folamy",
+        "ironytr",
+        "justindasilva",
+        "kenta92",
+        "madebyfabian",
+        "thingsneverchange"
+      ]
+    },
+    {
+      "id": 284,
+      "tamanho": 2,
+      "membros": [
+        "Timo972",
+        "gemmadlou"
+      ]
+    },
+    {
+      "id": 286,
+      "tamanho": 3,
+      "membros": [
+        "Shawyeok",
+        "calebwaldner",
+        "giftimie"
+      ]
+    },
+    {
+      "id": 290,
+      "tamanho": 3,
+      "membros": [
+        "Jamie4224",
+        "botic",
+        "grob"
+      ]
+    },
+    {
+      "id": 307,
+      "tamanho": 2,
+      "membros": [
+        "SEUH",
+        "horvbalint"
+      ]
+    },
+    {
+      "id": 309,
+      "tamanho": 2,
+      "membros": [
+        "YuLogun",
+        "huang-julien"
+      ]
+    },
+    {
+      "id": 310,
+      "tamanho": 5,
+      "membros": [
+        "ManUtopiK",
+        "Perdolique",
+        "huseeiin",
+        "medz",
+        "spokodev"
+      ]
+    },
+    {
+      "id": 311,
+      "tamanho": 2,
+      "membros": [
+        "RobertHaba",
+        "hymair"
+      ]
+    },
+    {
+      "id": 327,
+      "tamanho": 3,
+      "membros": [
+        "guibulator",
+        "jasenmichael",
+        "trc-mathieu"
+      ]
+    },
+    {
+      "id": 328,
+      "tamanho": 2,
+      "membros": [
+        "Attacler",
+        "jbergstroem"
+      ]
+    },
+    {
+      "id": 336,
+      "tamanho": 4,
+      "membros": [
+        "cosbgn",
+        "joseph-montanez",
+        "mulhoon",
+        "yauri-io"
+      ]
+    },
+    {
+      "id": 337,
+      "tamanho": 4,
+      "membros": [
+        "arily",
+        "gyhyfj",
+        "joshmossas",
+        "prashantnirgun"
+      ]
+    },
+    {
+      "id": 342,
+      "tamanho": 3,
+      "membros": [
+        "PrimeTimeTran",
+        "juliusmarminge",
+        "lucacicada"
+      ]
+    },
+    {
+      "id": 355,
+      "tamanho": 11,
+      "membros": [
+        "Kinfe123",
+        "Ray0907",
+        "SamuelMarks",
+        "drewbaker",
+        "hahavenn",
+        "kricsleo",
+        "lammerfalcon",
+        "maxdzin",
+        "s0h311",
+        "starzou",
+        "zsilbi"
+      ]
+    },
+    {
+      "id": 372,
+      "tamanho": 3,
+      "membros": [
+        "andrucado",
+        "descovi",
+        "lvzhenbo"
+      ]
+    },
+    {
+      "id": 380,
+      "tamanho": 3,
+      "membros": [
+        "MSchutt",
+        "binajmen",
+        "maou-shonen"
+      ]
+    },
+    {
+      "id": 383,
+      "tamanho": 3,
+      "membros": [
+        "antoinerey",
+        "go4cas",
+        "markthree"
+      ]
+    },
+    {
+      "id": 387,
+      "tamanho": 2,
+      "membros": [
+        "bhouston",
+        "mattccrampton"
+      ]
+    },
+    {
+      "id": 389,
+      "tamanho": 2,
+      "membros": [
+        "autofix-troubleshooter",
+        "maximepvrt"
+      ]
+    },
+    {
+      "id": 400,
+      "tamanho": 2,
+      "membros": [
+        "andrewrynhard",
+        "mihail727"
+      ]
+    },
+    {
+      "id": 406,
+      "tamanho": 8,
+      "membros": [
+        "AustinGil",
+        "chibx",
+        "magne4000",
+        "maximilliangeorge",
+        "mirabledictu",
+        "mvrlin",
+        "steinathan",
+        "targetlucked69"
+      ]
+    },
+    {
+      "id": 446,
+      "tamanho": 3,
+      "membros": [
+        "alimozdemir",
+        "julienguillot77",
+        "phoenix-ru"
+      ]
+    },
+    {
+      "id": 447,
+      "tamanho": 148,
+      "membros": [
+        "0xflotus",
+        "331797832",
+        "43081j",
+        "87xie",
+        "AaronDewes",
+        "AaronSmithX",
+        "AdamBD",
+        "AndreyYolkin",
+        "ArthurMJ96",
+        "DallasHoff",
+        "ElYaiko",
+        "FredKSchott",
+        "GoldenGamerLP",
+        "Hornwitser",
+        "Intevel",
+        "IsraelOrtuno",
+        "JHolcman-T",
+        "Jclong98",
+        "JinJieBeWater",
+        "JoniLieh",
+        "JulianMar",
+        "Kai-ros",
+        "MathieuDerelle",
+        "MickL",
+        "Norel",
+        "OhB00",
+        "OskarLebuda",
+        "PengBoUESTC",
+        "PhaxeNor",
+        "PierreNodles",
+        "Pinegin",
+        "PitsPower",
+        "SamVerschueren",
+        "TheBrenny",
+        "Waleed-KH",
+        "WooHoo-Wu",
+        "alanraison",
+        "ali-master",
+        "ankurpowar",
+        "arkhaiel",
+        "aturingmachine",
+        "autofix-ci",
+        "bacongobbler",
+        "bao-tran-saltovn",
+        "beeequeue",
+        "beganovich",
+        "binyamin",
+        "bombur51",
+        "brtinney",
+        "byronferguson",
+        "byteab",
+        "carbohydrate",
+        "casualmatt",
+        "catalina-uphold",
+        "cesxhin",
+        "cfv1984",
+        "chmking",
+        "cysabi",
+        "dan-hale",
+        "danielkellyio",
+        "daron81",
+        "dethdkn",
+        "devlzcode",
+        "dinwwwh",
+        "eanavitarte",
+        "emdede",
+        "farishan",
+        "fkammer",
+        "flozero",
+        "gaetansenn",
+        "gautemo",
+        "genu",
+        "guoyangzhen",
+        "gutenye",
+        "hecateball",
+        "hjb1694",
+        "hrynevychroman",
+        "ineshbose",
+        "ismailsabet",
+        "itpropro",
+        "izoukhai",
+        "jakobrosenberg",
+        "jiakun-zhao",
+        "julesfrn",
+        "just-maik",
+        "kaaax0815",
+        "kirpalmakanga",
+        "kspace-trk",
+        "kursataktas",
+        "lautiamkok",
+        "lesion",
+        "lmq352489099",
+        "lnbin",
+        "luoling8192",
+        "markexin",
+        "martinsjek",
+        "mcollina",
+        "michealroberts",
+        "mihaon",
+        "mikeshi80",
+        "mstaack",
+        "mukundshah",
+        "n4an",
+        "nerdoza",
+        "newclarityex",
+        "nhattran998",
+        "nksaraf",
+        "noook",
+        "passionate-bram",
+        "patogordo",
+        "peerreynders",
+        "pi0",
+        "posva",
+        "productdevbook",
+        "reslear",
+        "ricardogobbosouza",
+        "rinsuki",
+        "rtritto",
+        "salim-dev",
+        "samydoesit",
+        "sandros94",
+        "scripness",
+        "seho-dev",
+        "simon-kolkmann",
+        "siranweb",
+        "sirenkovladd",
+        "sone-meidai",
+        "teleskop150750",
+        "terwer",
+        "tmohammad78",
+        "tnabil",
+        "tobychidi",
+        "tolu",
+        "tremorrisdev",
+        "upstars-dmshevchenko",
+        "uynilo9",
+        "vejja",
+        "vinayakkulkarni",
+        "vushe",
+        "wesley3295",
+        "wvovaw",
+        "xxRockOnxx",
+        "yassilah",
+        "yisibell",
+        "ymansurozer",
+        "zauni",
+        "zendagin",
+        "zuixinwang"
+      ]
+    },
+    {
+      "id": 449,
+      "tamanho": 3,
+      "membros": [
+        "becem-gharbi",
+        "cuebit",
+        "platform-kit"
+      ]
+    },
+    {
+      "id": 473,
+      "tamanho": 5,
+      "membros": [
+        "AloisSeckar",
+        "arpadgabor",
+        "cfab",
+        "mileo",
+        "robertorinaldi-dev"
+      ]
+    }
+  ],
+  "modularidade": 0.432428,
+  "bridging_ties": [
+    {
+      "vertice": 22,
+      "label": "BayBreezy",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.75,
+      "comunidade_atual": 142,
+      "grau": 4
+    },
+    {
+      "vertice": 380,
+      "label": "maou-shonen",
+      "comunidades_vizinhas": 6,
+      "indice_intermediacao": 0.714286,
+      "comunidade_atual": 380,
+      "grau": 7
+    },
+    {
+      "vertice": 85,
+      "label": "Mokkapps",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 104,
+      "grau": 3
+    },
+    {
+      "vertice": 141,
+      "label": "aaharu",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 183,
+      "grau": 3
+    },
+    {
+      "vertice": 157,
+      "label": "amondnet",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 157,
+      "grau": 3
+    },
+    {
+      "vertice": 171,
+      "label": "ashutosh887",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 183,
+      "label": "benlavalley",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 183,
+      "grau": 3
+    },
+    {
+      "vertice": 194,
+      "label": "brc-dd",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 149,
+      "grau": 3
+    },
+    {
+      "vertice": 206,
+      "label": "catfishlty",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 210,
+      "label": "cerinoligutom",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 230,
+      "label": "codecov-commenter",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 234,
+      "label": "cpreston321",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 265,
+      "label": "efraimbart",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 60,
+      "grau": 3
+    },
+    {
+      "vertice": 270,
+      "label": "etroynov",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 274,
+      "label": "farnabaz",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 304,
+      "label": "hidekatsu-izuno",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 329,
+      "label": "jd1378",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 60,
+      "grau": 3
+    },
+    {
+      "vertice": 371,
+      "label": "luxass",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 392,
+      "label": "medz",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 310,
+      "grau": 3
+    },
+    {
+      "vertice": 461,
+      "label": "randName",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 490,
+      "label": "silvercent011",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 560,
+      "label": "zhiyuanzmj",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.666667,
+      "comunidade_atual": 60,
+      "grau": 3
+    },
+    {
+      "vertice": 355,
+      "label": "kricsleo",
+      "comunidades_vizinhas": 9,
+      "indice_intermediacao": 0.653846,
+      "comunidade_atual": 355,
+      "grau": 26
+    },
+    {
+      "vertice": 310,
+      "label": "huseeiin",
+      "comunidades_vizinhas": 6,
+      "indice_intermediacao": 0.636364,
+      "comunidade_atual": 310,
+      "grau": 11
+    },
+    {
+      "vertice": 228,
+      "label": "cloudflare-workers-and-pages",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.615385,
+      "comunidade_atual": 19,
+      "grau": 13
+    },
+    {
+      "vertice": 447,
+      "label": "pi0",
+      "comunidades_vizinhas": 46,
+      "indice_intermediacao": 0.613636,
+      "comunidade_atual": 447,
+      "grau": 352
+    },
+    {
+      "vertice": 74,
+      "label": "Lyokolux",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 277,
+      "grau": 5
+    },
+    {
+      "vertice": 101,
+      "label": "Pinegin",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 447,
+      "grau": 5
+    },
+    {
+      "vertice": 106,
+      "label": "Rednas83",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 157,
+      "grau": 5
+    },
+    {
+      "vertice": 164,
+      "label": "antfu",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 164,
+      "grau": 5
+    },
+    {
+      "vertice": 388,
+      "label": "maxdzin",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 355,
+      "grau": 5
+    },
+    {
+      "vertice": 430,
+      "label": "notshekhar",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 19,
+      "grau": 5
+    },
+    {
+      "vertice": 449,
+      "label": "platform-kit",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 449,
+      "grau": 5
+    },
+    {
+      "vertice": 531,
+      "label": "unite4",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.6,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 406,
+      "label": "mirabledictu",
+      "comunidades_vizinhas": 6,
+      "indice_intermediacao": 0.571429,
+      "comunidade_atual": 406,
+      "grau": 14
+    },
+    {
+      "vertice": 28,
+      "label": "ChangJoo-Park",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.571429,
+      "comunidade_atual": 139,
+      "grau": 7
+    },
+    {
+      "vertice": 196,
+      "label": "brunohstein",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.571429,
+      "comunidade_atual": 196,
+      "grau": 7
+    },
+    {
+      "vertice": 233,
+      "label": "cosbgn",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.571429,
+      "comunidade_atual": 336,
+      "grau": 7
+    },
+    {
+      "vertice": 542,
+      "label": "wobsoriano",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.571429,
+      "comunidade_atual": 229,
+      "grau": 7
+    },
+    {
+      "vertice": 51,
+      "label": "IlyaSemenov",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 10
+    },
+    {
+      "vertice": 292,
+      "label": "gulshan",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 8
+    },
+    {
+      "vertice": 299,
+      "label": "harlan-zw",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 8
+    },
+    {
+      "vertice": 429,
+      "label": "nopeless",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 8
+    },
+    {
+      "vertice": 58,
+      "label": "JHolcman-T",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 447,
+      "grau": 6
+    },
+    {
+      "vertice": 333,
+      "label": "jolo-dev",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 6
+    },
+    {
+      "vertice": 337,
+      "label": "joshmossas",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 337,
+      "grau": 6
+    },
+    {
+      "vertice": 470,
+      "label": "rijkvanzanten",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 6
+    },
+    {
+      "vertice": 31,
+      "label": "DamianGlowala",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 50,
+      "label": "HugoRCD",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 4
+    },
+    {
+      "vertice": 77,
+      "label": "MarcTroll",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 209,
+      "grau": 4
+    },
+    {
+      "vertice": 91,
+      "label": "NukeJS",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 227,
+      "grau": 4
+    },
+    {
+      "vertice": 162,
+      "label": "angelhdzmultimedia",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 221,
+      "label": "chrisnoden",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 243,
+      "label": "dardanbujupaj",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 312,
+      "label": "iainsproat",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 314,
+      "label": "igorjacauna",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 319,
+      "label": "imslepov",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 4
+    },
+    {
+      "vertice": 364,
+      "label": "lewebsimple",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 60,
+      "grau": 4
+    },
+    {
+      "vertice": 367,
+      "label": "logaretm",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 4
+    },
+    {
+      "vertice": 383,
+      "label": "markthree",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 383,
+      "grau": 4
+    },
+    {
+      "vertice": 424,
+      "label": "nickspaargaren",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 4
+    },
+    {
+      "vertice": 432,
+      "label": "offizium-berndstorath",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 143,
+      "grau": 4
+    },
+    {
+      "vertice": 439,
+      "label": "passionate-bram",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 447,
+      "grau": 4
+    },
+    {
+      "vertice": 446,
+      "label": "phoenix-ru",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 446,
+      "grau": 4
+    },
+    {
+      "vertice": 6,
+      "label": "Aareksio",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 10,
+      "label": "Achrou",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 156,
+      "grau": 2
+    },
+    {
+      "vertice": 14,
+      "label": "AmitGurbani",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 17,
+      "label": "Attacler",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 328,
+      "grau": 2
+    },
+    {
+      "vertice": 25,
+      "label": "BobbieGoede",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 29,
+      "label": "CodeDredd",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 33,
+      "label": "Drackin",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 35,
+      "label": "ENBYSS",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 37,
+      "label": "ElMatella",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 40,
+      "label": "GalacticHypernova",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 43,
+      "label": "Harm-Nullix",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 78,
+      "grau": 2
+    },
+    {
+      "vertice": 46,
+      "label": "HigherOrderLogic",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 49,
+      "label": "HugoMuller",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 52,
+      "label": "Ingramz",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 54,
+      "label": "IqroNegoro",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 143,
+      "grau": 2
+    },
+    {
+      "vertice": 62,
+      "label": "JianJroh",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 78,
+      "label": "MarijnMensinga",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 78,
+      "grau": 2
+    },
+    {
+      "vertice": 87,
+      "label": "Narixius",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 88,
+      "label": "Ngob",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 93,
+      "label": "OmarMAttia7",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 105,
+      "label": "Ray0907",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 355,
+      "grau": 2
+    },
+    {
+      "vertice": 110,
+      "label": "RyanFrantz",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 113,
+      "label": "SamuelMarks",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 355,
+      "grau": 2
+    },
+    {
+      "vertice": 115,
+      "label": "Shahriar-Rahi",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 117,
+      "label": "Shhu",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 121,
+      "label": "Sn0wye",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 128,
+      "label": "ThomasBerne",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 129,
+      "label": "TimGuendel",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 130,
+      "label": "Timo972",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 284,
+      "grau": 2
+    },
+    {
+      "vertice": 136,
+      "label": "XiNiHa",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 146,
+      "label": "agracia-foticos",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 154,
+      "label": "alimozdemir",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 446,
+      "grau": 2
+    },
+    {
+      "vertice": 165,
+      "label": "antoinerey",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 383,
+      "grau": 2
+    },
+    {
+      "vertice": 168,
+      "label": "arily",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 337,
+      "grau": 2
+    },
+    {
+      "vertice": 176,
+      "label": "autofix-troubleshooter",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 389,
+      "grau": 2
+    },
+    {
+      "vertice": 186,
+      "label": "bhouston",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 387,
+      "grau": 2
+    },
+    {
+      "vertice": 203,
+      "label": "casper-lindh",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 209,
+      "label": "ceodevforce",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 125,
+      "grau": 2
+    },
+    {
+      "vertice": 211,
+      "label": "cernymatej",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 217,
+      "label": "chibx",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 406,
+      "grau": 2
+    },
+    {
+      "vertice": 226,
+      "label": "ckvv",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 231,
+      "label": "codecov-io",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 139,
+      "grau": 2
+    },
+    {
+      "vertice": 235,
+      "label": "csvwolf",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 262,
+      "label": "edivados",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 264,
+      "label": "educkf",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 280,
+      "label": "fredimitchel",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 306,
+      "label": "homersimpsons",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 309,
+      "label": "huang-julien",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 309,
+      "grau": 2
+    },
+    {
+      "vertice": 311,
+      "label": "hymair",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 311,
+      "grau": 2
+    },
+    {
+      "vertice": 313,
+      "label": "icarusgk",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 318,
+      "label": "imcm7",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 324,
+      "label": "itssimon",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 330,
+      "label": "jerelmiller",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 332,
+      "label": "johannschopplich",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 344,
+      "label": "justindasilva",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 277,
+      "grau": 2
+    },
+    {
+      "vertice": 347,
+      "label": "katywings",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 351,
+      "label": "kevinmarrec",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 353,
+      "label": "kohasummons",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 358,
+      "label": "lammerfalcon",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 355,
+      "grau": 2
+    },
+    {
+      "vertice": 360,
+      "label": "lborgav",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 143,
+      "grau": 2
+    },
+    {
+      "vertice": 361,
+      "label": "leno23",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 376,
+      "label": "magne4000",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 406,
+      "grau": 2
+    },
+    {
+      "vertice": 377,
+      "label": "maicWorkGithub",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 379,
+      "label": "manuel-84",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 389,
+      "label": "maximepvrt",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 389,
+      "grau": 2
+    },
+    {
+      "vertice": 393,
+      "label": "mei23",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 394,
+      "label": "meirlamdan",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 397,
+      "label": "mengdu",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 227,
+      "grau": 2
+    },
+    {
+      "vertice": 400,
+      "label": "mihail727",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 400,
+      "grau": 2
+    },
+    {
+      "vertice": 402,
+      "label": "mik7up",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 419,
+      "label": "nathanchase",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 436,
+      "label": "oscartbeaumont",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 437,
+      "label": "outslept",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 440,
+      "label": "patak-cat",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 451,
+      "label": "prashantnirgun",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 337,
+      "grau": 2
+    },
+    {
+      "vertice": 454,
+      "label": "qin-guan",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 60,
+      "grau": 2
+    },
+    {
+      "vertice": 456,
+      "label": "quentindutot",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 89,
+      "grau": 2
+    },
+    {
+      "vertice": 464,
+      "label": "renhiyama",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 60,
+      "grau": 2
+    },
+    {
+      "vertice": 474,
+      "label": "rrd108",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 488,
+      "label": "sergioazoc",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 489,
+      "label": "shtse8",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 498,
+      "label": "soub4i",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 501,
+      "label": "sppmstar",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 503,
+      "label": "starzou",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 355,
+      "grau": 2
+    },
+    {
+      "vertice": 527,
+      "label": "triandamai",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 530,
+      "label": "typed-sigterm",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 232,
+      "grau": 2
+    },
+    {
+      "vertice": 535,
+      "label": "victorpagan",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 190,
+      "grau": 2
+    },
+    {
+      "vertice": 543,
+      "label": "wolodev",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 544,
+      "label": "wuiyang",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 554,
+      "label": "ysknsid25",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 229,
+      "grau": 2
+    },
+    {
+      "vertice": 558,
+      "label": "zelid",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 19,
+      "grau": 2
+    },
+    {
+      "vertice": 561,
+      "label": "zsilbi",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.5,
+      "comunidade_atual": 355,
+      "grau": 2
+    },
+    {
+      "vertice": 452,
+      "label": "productdevbook",
+      "comunidades_vizinhas": 9,
+      "indice_intermediacao": 0.4375,
+      "comunidade_atual": 447,
+      "grau": 32
+    },
+    {
+      "vertice": 481,
+      "label": "sandros94",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.428571,
+      "comunidade_atual": 447,
+      "grau": 14
+    },
+    {
+      "vertice": 465,
+      "label": "renovate",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.428571,
+      "comunidade_atual": 229,
+      "grau": 7
+    },
+    {
+      "vertice": 44,
+      "label": "Hebilicious",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.421053,
+      "comunidade_atual": 60,
+      "grau": 19
+    },
+    {
+      "vertice": 277,
+      "label": "folamy",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.416667,
+      "comunidade_atual": 277,
+      "grau": 12
+    },
+    {
+      "vertice": 521,
+      "label": "tobiasdiez",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.416667,
+      "comunidade_atual": 19,
+      "grau": 12
+    },
+    {
+      "vertice": 448,
+      "label": "pkg-pr-new",
+      "comunidades_vizinhas": 5,
+      "indice_intermediacao": 0.411765,
+      "comunidade_atual": 232,
+      "grau": 17
+    },
+    {
+      "vertice": 82,
+      "label": "Maxttier",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 166,
+      "label": "apparentvisuals",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 60,
+      "grau": 5
+    },
+    {
+      "vertice": 184,
+      "label": "besscroft",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 184,
+      "grau": 5
+    },
+    {
+      "vertice": 225,
+      "label": "cjpearson",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 315,
+      "label": "iiio2",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 374,
+      "label": "maciej-jezierski",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 19,
+      "grau": 5
+    },
+    {
+      "vertice": 410,
+      "label": "moyukingS",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 60,
+      "grau": 5
+    },
+    {
+      "vertice": 433,
+      "label": "oleghalin",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 457,
+      "label": "rafaeldsousa",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.4,
+      "comunidade_atual": 19,
+      "grau": 5
+    },
+    {
+      "vertice": 126,
+      "label": "TheAlexLichter",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.384615,
+      "comunidade_atual": 19,
+      "grau": 13
+    },
+    {
+      "vertice": 143,
+      "label": "acidjazz",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.375,
+      "comunidade_atual": 143,
+      "grau": 8
+    },
+    {
+      "vertice": 173,
+      "label": "atinux",
+      "comunidades_vizinhas": 6,
+      "indice_intermediacao": 0.35,
+      "comunidade_atual": 19,
+      "grau": 20
+    },
+    {
+      "vertice": 242,
+      "label": "danielroe",
+      "comunidades_vizinhas": 8,
+      "indice_intermediacao": 0.340426,
+      "comunidade_atual": 229,
+      "grau": 47
+    },
+    {
+      "vertice": 229,
+      "label": "codecov",
+      "comunidades_vizinhas": 13,
+      "indice_intermediacao": 0.336842,
+      "comunidade_atual": 229,
+      "grau": 95
+    },
+    {
+      "vertice": 24,
+      "label": "Birleyici",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 125,
+      "grau": 6
+    },
+    {
+      "vertice": 42,
+      "label": "GuppyTheCat",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 89,
+      "grau": 6
+    },
+    {
+      "vertice": 418,
+      "label": "natemate90",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 6
+    },
+    {
+      "vertice": 473,
+      "label": "robertorinaldi-dev",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 473,
+      "grau": 6
+    },
+    {
+      "vertice": 502,
+      "label": "stafyniaksacha",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 6
+    },
+    {
+      "vertice": 2,
+      "label": "3m1n3nc3",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 232,
+      "grau": 3
+    },
+    {
+      "vertice": 5,
+      "label": "8ctavio",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 232,
+      "grau": 3
+    },
+    {
+      "vertice": 21,
+      "label": "Baroshem",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 32,
+      "label": "DavidDeSloovere",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 48,
+      "label": "Hornwitser",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 447,
+      "grau": 3
+    },
+    {
+      "vertice": 56,
+      "label": "JAD3N",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 70,
+      "label": "L422Y",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 107,
+      "label": "Rigo-m",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 164,
+      "grau": 3
+    },
+    {
+      "vertice": 118,
+      "label": "Shyam-Chen",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 131,
+      "label": "TorstenDittmann",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 145,
+      "label": "afonsosantos",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 145,
+      "grau": 3
+    },
+    {
+      "vertice": 161,
+      "label": "andysay",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 167,
+      "label": "aquapi",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 60,
+      "grau": 3
+    },
+    {
+      "vertice": 202,
+      "label": "carcinocron",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 220,
+      "label": "chrisbbreuer",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 241,
+      "label": "danielrentz",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 244,
+      "label": "dargmuesli",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 256,
+      "label": "donywan",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 259,
+      "label": "dyeske61283",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 232,
+      "grau": 3
+    },
+    {
+      "vertice": 261,
+      "label": "edimitchel",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 263,
+      "label": "eduardosada",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 268,
+      "label": "emilsgulbis",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 286,
+      "label": "giftimie",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 286,
+      "grau": 3
+    },
+    {
+      "vertice": 290,
+      "label": "grob",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 290,
+      "grau": 3
+    },
+    {
+      "vertice": 293,
+      "label": "guoyangzhen",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 447,
+      "grau": 3
+    },
+    {
+      "vertice": 296,
+      "label": "gzf6",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 149,
+      "grau": 3
+    },
+    {
+      "vertice": 316,
+      "label": "ijkml",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 327,
+      "label": "jasenmichael",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 327,
+      "grau": 3
+    },
+    {
+      "vertice": 342,
+      "label": "juliusmarminge",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 342,
+      "grau": 3
+    },
+    {
+      "vertice": 348,
+      "label": "kazupon",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 354,
+      "label": "kongmoumou",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 368,
+      "label": "luca-smartpricing",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 372,
+      "label": "lvzhenbo",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 372,
+      "grau": 3
+    },
+    {
+      "vertice": 378,
+      "label": "maicss",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 395,
+      "label": "meixger",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 396,
+      "label": "melbourne2991",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 434,
+      "label": "onmax",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 232,
+      "grau": 3
+    },
+    {
+      "vertice": 441,
+      "label": "patogordo",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 447,
+      "grau": 3
+    },
+    {
+      "vertice": 443,
+      "label": "pavloniym",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 462,
+      "label": "redbar0n",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 60,
+      "grau": 3
+    },
+    {
+      "vertice": 508,
+      "label": "teleskop150750",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 447,
+      "grau": 3
+    },
+    {
+      "vertice": 509,
+      "label": "terminalchai",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 232,
+      "grau": 3
+    },
+    {
+      "vertice": 537,
+      "label": "vinnitu",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 19,
+      "grau": 3
+    },
+    {
+      "vertice": 547,
+      "label": "xjccc",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 555,
+      "label": "ytjmt",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.333333,
+      "comunidade_atual": 229,
+      "grau": 3
+    },
+    {
+      "vertice": 232,
+      "label": "coderabbitai",
+      "comunidades_vizinhas": 7,
+      "indice_intermediacao": 0.319149,
+      "comunidade_atual": 232,
+      "grau": 47
+    },
+    {
+      "vertice": 431,
+      "label": "nozomuikuta",
+      "comunidades_vizinhas": 6,
+      "indice_intermediacao": 0.304348,
+      "comunidade_atual": 229,
+      "grau": 46
+    },
+    {
+      "vertice": 258,
+      "label": "dvanmali",
+      "comunidades_vizinhas": 3,
+      "indice_intermediacao": 0.285714,
+      "comunidade_atual": 258,
+      "grau": 7
+    },
+    {
+      "vertice": 19,
+      "label": "BananaAcid",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 60,
+      "label": "JamieCurnow",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 60,
+      "grau": 4
+    },
+    {
+      "vertice": 84,
+      "label": "MickL",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 447,
+      "grau": 4
+    },
+    {
+      "vertice": 95,
+      "label": "P4sca1",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 108,
+      "label": "RihanArfan",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 108,
+      "grau": 4
+    },
+    {
+      "vertice": 122,
+      "label": "StevenPewsey",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 149,
+      "grau": 4
+    },
+    {
+      "vertice": 149,
+      "label": "ahoiroman",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 149,
+      "grau": 4
+    },
+    {
+      "vertice": 269,
+      "label": "enkot",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 271,
+      "label": "fabianwohlfart",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 60,
+      "grau": 4
+    },
+    {
+      "vertice": 281,
+      "label": "frenzzy",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 417,
+      "label": "nandi95",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 426,
+      "label": "nmathew98",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 487,
+      "label": "septatrix",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 229,
+      "grau": 4
+    },
+    {
+      "vertice": 494,
+      "label": "sisou",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 546,
+      "label": "xhebox",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.25,
+      "comunidade_atual": 19,
+      "grau": 4
+    },
+    {
+      "vertice": 20,
+      "label": "Barbapapazes",
+      "comunidades_vizinhas": 4,
+      "indice_intermediacao": 0.235294,
+      "comunidade_atual": 19,
+      "grau": 17
+    },
+    {
+      "vertice": 190,
+      "label": "bitbytebit1",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.2,
+      "comunidade_atual": 190,
+      "grau": 5
+    },
+    {
+      "vertice": 460,
+      "label": "ramsesgarate",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.2,
+      "comunidade_atual": 229,
+      "grau": 5
+    },
+    {
+      "vertice": 134,
+      "label": "WongSaang",
+      "comunidades_vizinhas": 2,
+      "indice_intermediacao": 0.142857,
+      "comunidade_atual": 144,
+      "grau": 7
+    }
+  ]
+}

@@ -1,9 +1,7 @@
 from config import (
-    DADOS_BRUTOS,
-    DADOS_PROC,
-    GITHUB_OWNER,
-    GITHUB_REPO,
     GITHUB_TOKEN,
+    obter_config_repositorio,
+    obter_diretorios_dados,
 )
 from github_client import GitHubClient
 from issues_fetcher import IssuesFetcher
@@ -18,7 +16,11 @@ class ExtracaoDados:
     extração de issues e pull requests do repositório configurado.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, repo_slug: str = "h3") -> None:
+        config_repositorio = obter_config_repositorio(repo_slug)
+        self.repo_slug = repo_slug
+        self.dados_brutos, self.dados_proc = obter_diretorios_dados(repo_slug)
+
         # Cria o cliente GitHub com o token de autenticação.
         client = GitHubClient(GITHUB_TOKEN)
 
@@ -26,29 +28,29 @@ class ExtracaoDados:
         # brutos serão gravados.
         self.issues_fetcher = IssuesFetcher(
             client,
-            GITHUB_OWNER,
-            GITHUB_REPO,
-            DADOS_BRUTOS,
+            config_repositorio["owner"],
+            config_repositorio["repo"],
+            self.dados_brutos,
         )
 
         # Inicializa o coletor de pull requests com as mesmas configurações.
         self.pr_fetcher = PRFetcher(
             client,
-            GITHUB_OWNER,
-            GITHUB_REPO,
-            DADOS_BRUTOS,
+            config_repositorio["owner"],
+            config_repositorio["repo"],
+            self.dados_brutos,
         )
 
         # Processa os JSONs brutos gerados pela coleta em arquivos prontos
         # para a construção do grafo.
-        self.interaction_parser = InteractionParser(DADOS_BRUTOS, DADOS_PROC)
+        self.interaction_parser = InteractionParser(self.dados_brutos, self.dados_proc)
 
     def _tem_dados_brutos(self) -> bool:
         # Detecta arquivos com os prefixos esperados para evitar falsos positivos
         patterns = ["issues_*.json", "pull_requests_*.json", "*.json"]
         found = []
         for p in patterns:
-            for f in DADOS_BRUTOS.glob(p):
+            for f in self.dados_brutos.glob(p):
                 found.append(f.name)
         return len(found) > 0
 
@@ -56,7 +58,7 @@ class ExtracaoDados:
         patterns = ["issues_*.json", "pull_requests_*.json", "*.json"]
         found = []
         for p in patterns:
-            for f in DADOS_BRUTOS.glob(p):
+            for f in self.dados_brutos.glob(p):
                 found.append(f.name)
         return sorted(set(found))
 
@@ -65,12 +67,12 @@ class ExtracaoDados:
             if not self._tem_dados_brutos():
                 print(
                     "Modo process_only solicitado, mas não há JSONs brutos em "
-                    f"{DADOS_BRUTOS}. Execute a coleta primeiro."
+                    f"{self.dados_brutos}. Execute a coleta primeiro."
                 )
                 return
             arquivos = self._listar_dados_brutos()
             print("Modo process_only ativo: pulando coleta e processando JSONs existentes...")
-            print(f"Arquivos encontrados em {DADOS_BRUTOS}: {arquivos}")
+            print(f"Arquivos encontrados em {self.dados_brutos}: {arquivos}")
             self.interaction_parser.parse()
             print("Processamento completo.")
             return
