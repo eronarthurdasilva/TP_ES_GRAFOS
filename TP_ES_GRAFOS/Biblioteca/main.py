@@ -19,6 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, os.path.abspath(BASE_DIR / "ExtracaoDados"))
 sys.path.insert(0, os.path.abspath(BASE_DIR / "ConstrucaoGrafos"))
 sys.path.insert(0, os.path.abspath(BASE_DIR / "Metricas"))
+sys.path.insert(0, os.path.abspath(BASE_DIR / "ExportacaoGrafos"))
 
 from extracao_de_dados import ExtracaoDados
 from config import (  # type: ignore[reportMissingImports]
@@ -31,6 +32,9 @@ from Construcao import Construcao  # type: ignore[reportMissingImports]
 from MetricasDeCentralidade import MetricasDeCentralidade  # type: ignore[reportMissingImports]
 from MetricasDeComunidade import analisar_comunidades  # type: ignore[reportMissingImports]
 from MetricasDeEstruturaCoesao import analisar_quatro_grafos_estrutura_coesao  # type: ignore[reportMissingImports]
+from ExportacaoGexf import ExportacaoGexf  # type: ignore[reportMissingImports]
+from gui_backend import executar_backend  # type: ignore[reportMissingImports]
+from gui_views import mostrar_resultados  # type: ignore[reportMissingImports]
 
 
 def _salvar_metricas_centralidade(grafo, nome_grafo: str, pasta_saida: Path) -> dict:
@@ -95,7 +99,33 @@ def _executar_metricas(grafo_lista, grafo_matriz, repo_slug: str, dados_processa
     )
 
 
-def main(process_only: bool = False, force: bool = False, repo: str = "h3"):
+def _executar_exportacao(repo_slug: str, dados_processados: Path, mapeamento_saida: Path) -> None:
+    """Executa a exportação GEXF e a exportação textual/CSV da interface do projeto."""
+    pasta_saida_gexf = BASE_DIR / "ExportacaoGrafos" / "saida_gexf" / repo_slug
+    pasta_saida_gui = BASE_DIR / "ExportacaoGrafos" / "saida_gui" / repo_slug
+
+    print("Executando exportação GEXF...")
+    exportador = ExportacaoGexf(
+        dados_processados=dados_processados,
+        arquivo_mapeamento=mapeamento_saida,
+        pasta_saida=pasta_saida_gexf,
+        exportar_vertices_isolados=False,
+        ignorar_auto_lacos=True,
+        normalizar_pesos_gephi=True,
+        peso_visual_minimo=1.0,
+        peso_visual_maximo=5.0,
+    )
+    exportador.exportar_todos()
+
+    print("Executando interface textual e exportação complementar...")
+    resultado_gui = executar_backend(
+        pasta_dados_processados=dados_processados,
+        pasta_saida=pasta_saida_gui,
+    )
+    mostrar_resultados(resultado_gui)
+
+
+def main(process_only: bool = False, force: bool = False, repo: str = "h3", exportar: bool = True):
     """Executa a extração, atualiza o mapeamento e devolve os dois grafos prontos."""
     config = obter_config_repositorio(repo)
     _dados_brutos, dados_processados = obter_diretorios_dados(repo)
@@ -115,6 +145,9 @@ def main(process_only: bool = False, force: bool = False, repo: str = "h3"):
     grafo_lista, grafo_matriz = construtor.construir_todos()
 
     _executar_metricas(grafo_lista, grafo_matriz, repo, dados_processados)
+
+    if exportar:
+        _executar_exportacao(repo, dados_processados, mapeamento_saida)
 
     # Gerar relatório detalhado automaticamente, se disponível
     try:
@@ -155,9 +188,19 @@ if __name__ == "__main__":
         action="store_true",
         help="Forçar a coleta mesmo se existirem JSONs brutos locais.",
     )
+    parser.add_argument(
+        "--sem-exportacao",
+        action="store_true",
+        help="Não executar a exportação GEXF nem a interface textual após montar os grafos.",
+    )
     args = parser.parse_args()
 
-    grafo_lista, grafo_matriz = main(process_only=args.process_only, force=args.force, repo=args.repo)
+    grafo_lista, grafo_matriz = main(
+        process_only=args.process_only,
+        force=args.force,
+        repo=args.repo,
+        exportar=not args.sem_exportacao,
+    )
     print(
         f"Grafo em lista: {grafo_lista.getVertexCount()} vertices, {grafo_lista.getEdgeCount()} arestas"
     )
