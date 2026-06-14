@@ -1,5 +1,4 @@
 """ConferirGexf.py
-=================
 
 Script simples para conferir se os arquivos .gexf têm nós e arestas.
 Não usa biblioteca de grafos.
