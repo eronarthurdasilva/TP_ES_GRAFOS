@@ -12,6 +12,9 @@ import json
 import os
 import sys
 import subprocess
+import socket
+import time
+import webbrowser
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -35,6 +38,10 @@ from MetricasDeEstruturaCoesao import analisar_quatro_grafos_estrutura_coesao  #
 from ExportacaoGexf import ExportacaoGexf  # type: ignore[reportMissingImports]
 from gui_backend import executar_backend  # type: ignore[reportMissingImports]
 from gui_views import mostrar_resultados  # type: ignore[reportMissingImports]
+
+
+GUI_HOST = "127.0.0.1"
+GUI_PORT = 8765
 
 
 def _salvar_metricas_centralidade(grafo, nome_grafo: str, pasta_saida: Path) -> dict:
@@ -121,8 +128,43 @@ def _executar_exportacao(repo_slug: str, dados_processados: Path, mapeamento_sai
     resultado_gui = executar_backend(
         pasta_dados_processados=dados_processados,
         pasta_saida=pasta_saida_gui,
+        repo_slug=repo_slug,
     )
     mostrar_resultados(resultado_gui)
+
+
+def _servidor_gui_ativo(host: str = GUI_HOST, port: int = GUI_PORT) -> bool:
+    """Verifica se a interface web local ja esta escutando na porta padrao."""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.settimeout(0.2)
+        return sock.connect_ex((host, port)) == 0
+
+
+def _abrir_gui_web(repo_slug: str, host: str = GUI_HOST, port: int = GUI_PORT) -> None:
+    """Abre a interface web local no navegador apos executar o pipeline."""
+    gui_script = BASE_DIR / "ExportacaoGrafos" / "gui_web.py"
+    if not gui_script.exists():
+        print(f"Interface web nao encontrada em {gui_script}")
+        return
+
+    url = f"http://{host}:{port}/?repo={repo_slug}"
+
+    try:
+        if not _servidor_gui_ativo(host, port):
+            subprocess.Popen(
+                [sys.executable, str(gui_script), "--host", host, "--port", str(port)],
+                cwd=str(gui_script.parent),
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,
+            )
+            time.sleep(0.8)
+
+        print(f"Abrindo interface grafica em: {url}")
+        webbrowser.open(url)
+    except Exception as exc:  # pragma: no cover - depende do ambiente grafico local
+        print(f"Nao foi possivel abrir a interface grafica automaticamente: {exc}")
+        print(f"Abra manualmente: {url}")
 
 
 def main(process_only: bool = False, force: bool = False, repo: str = "h3", exportar: bool = True):
@@ -193,6 +235,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Não executar a exportação GEXF nem a interface textual após montar os grafos.",
     )
+    parser.add_argument(
+        "--sem-gui",
+        action="store_true",
+        help="Não abrir a interface gráfica web ao final da execução.",
+    )
     args = parser.parse_args()
 
     grafo_lista, grafo_matriz = main(
@@ -207,3 +254,6 @@ if __name__ == "__main__":
     print(
         f"Grafo em matriz: {grafo_matriz.getVertexCount()} vertices, {grafo_matriz.getEdgeCount()} arestas"
     )
+
+    if not args.sem_gui and os.getenv("TP_ES_GRAFOS_SEM_GUI", "").lower() not in {"1", "true", "sim"}:
+        _abrir_gui_web(args.repo)

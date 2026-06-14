@@ -633,7 +633,7 @@ def obter_resumo_comunidades(grafo, limite=5):
 # MÉTRICAS JÁ GERADAS POR OUTROS ARQUIVOS
 
 
-def carregar_metricas_estrutura_coesao_se_existir(pasta_raiz=None):
+def carregar_metricas_estrutura_coesao_se_existir(pasta_raiz=None, repo_slug=None):
     """
     Tenta carregar o JSON de métricas de estrutura e coesão, caso ele já tenha
     sido gerado pelo arquivo MetricasDeEstruturaCoesao.py.
@@ -653,15 +653,25 @@ def carregar_metricas_estrutura_coesao_se_existir(pasta_raiz=None):
     else:
         pasta_raiz = Path(pasta_raiz)
 
-    caminho = (
-        pasta_raiz
-        / "Metricas"
-        / "saida_metricas"
-        / "estrutura_coesao"
-        / "metricas_estrutura_coesao.json"
+    caminho_base = pasta_raiz / "Metricas" / "saida_metricas"
+    caminhos_possiveis = []
+
+    if repo_slug:
+        caminhos_possiveis.append(
+            caminho_base / repo_slug / "estrutura_coesao" / "metricas_estrutura_coesao.json"
+        )
+
+    caminhos_possiveis.append(
+        caminho_base / "estrutura_coesao" / "metricas_estrutura_coesao.json"
     )
 
-    if not caminho.exists():
+    caminho = None
+    for candidato in caminhos_possiveis:
+        if candidato.exists():
+            caminho = candidato
+            break
+
+    if caminho is None:
         return {}
 
     try:
@@ -753,7 +763,7 @@ def montar_resultado_grafo(grafo, metricas_estrutura_coesao=None):
     }
 
 
-def executar_backend(pasta_dados_processados=None, pasta_saida=None):
+def executar_backend(pasta_dados_processados=None, pasta_saida=None, repo_slug=None):
     """
     Interface programática principal do backend.
 
@@ -780,7 +790,10 @@ def executar_backend(pasta_dados_processados=None, pasta_saida=None):
         pasta_saida = Path(pasta_saida)
 
     grafos = carregar_grafos_processados(pasta_dados_processados)
-    metricas_estrutura_coesao = carregar_metricas_estrutura_coesao_se_existir(pasta_raiz)
+    metricas_estrutura_coesao = carregar_metricas_estrutura_coesao_se_existir(
+        pasta_raiz,
+        repo_slug=repo_slug,
+    )
 
     resultados_grafos = []
 

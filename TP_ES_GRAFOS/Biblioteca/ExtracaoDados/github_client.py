@@ -7,8 +7,6 @@ import json
 import time
 from typing import Any, Dict, Optional
 
-import requests
-
 
 class GitHubClient:
     """Realiza requisições autenticadas à API GraphQL do GitHub."""
@@ -41,6 +39,15 @@ class GitHubClient:
         Raises:
             RuntimeError: em caso de falha de rede, erro HTTP ou erro GraphQL.
         """
+        try:
+            import requests
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "A biblioteca 'requests' nao esta instalada. "
+                "Instale as dependencias com 'pip install -r requirements.txt' "
+                "para fazer coleta/scraping no GitHub."
+            ) from exc
+
         espera = self.ESPERA_INICIAL
 
         for tentativa in range(1, self.MAX_TENTATIVAS + 1):
