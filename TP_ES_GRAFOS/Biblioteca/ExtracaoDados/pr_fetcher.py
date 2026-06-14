@@ -37,6 +37,7 @@ class PRFetcher:
                       login
                     }
                     state
+                    submittedAt
                   }
                 }
                 comments(first: 100) {

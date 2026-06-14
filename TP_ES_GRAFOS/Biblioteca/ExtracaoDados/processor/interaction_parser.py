@@ -1,6 +1,3 @@
-import sys, os
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
 """
 Responsabilidade: ler os JSONs brutos de dados_brutos/ e separar
 as interações entre usuários em 3 arquivos em dados_processados/:
