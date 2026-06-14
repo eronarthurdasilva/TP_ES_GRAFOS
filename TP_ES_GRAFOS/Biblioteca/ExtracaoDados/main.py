@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Ponto de entrada para a extração de dados do repositório GitHub.
-Executa a coleta de issues e pull requests.
+Executa a coleta de issues, pull requests, reviews e merges.
 """
 
 import argparse

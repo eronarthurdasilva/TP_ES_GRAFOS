@@ -1,7 +1,4 @@
-"""Métricas de comunidade para os grafos do projeto.
-
-Este módulo trabalha diretamente com as implementações de grafo já construídas
-no projeto, sem uso de bibliotecas prontas como networkx.
+"""Métricas de comunidade para os grafos do projeto.s
 
 Funcionalidades:
 - Detecção de comunidades por label propagation em projeção não direcionada
