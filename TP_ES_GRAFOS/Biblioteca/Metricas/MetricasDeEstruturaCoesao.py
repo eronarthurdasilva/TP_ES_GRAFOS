@@ -6,9 +6,6 @@ from pathlib import Path
 
 # MÉTRICAS DE ESTRUTURA E COESÃO
 # 
-# Ele não usa bibliotecas de grafos, como NetworkX, igraph ou graph-tool.
-# Toda a representação do grafo é feita com estruturas básicas do Python:
-# dict, set, list e tuple.
 #
 # Métricas implementadas:
 # 1. Densidade da rede
