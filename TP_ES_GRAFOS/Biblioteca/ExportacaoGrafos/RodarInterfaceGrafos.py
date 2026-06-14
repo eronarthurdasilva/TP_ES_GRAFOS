@@ -1,11 +1,9 @@
 """
 Arquivo de execução da interface programática simples.
 
-Execute a partir da raiz do projeto:
+Execute:
     python ExportacaoGrafos/RodarInterfaceGrafos.py
-
-Ou, no Windows:
-    py ExportacaoGrafos/RodarInterfaceGrafos.py
+    
 """
 
 from gui_views import executar_view

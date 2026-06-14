@@ -43,12 +43,6 @@ python ConstrucaoGrafos/MapeamentoVertices.py
 python ConstrucaoGrafos/Construcao.py
 python ExportacaoGrafos/RodarExportacao.py
 
-Ou no Windows:
-
-py ConstrucaoGrafos/MapeamentoVertices.py
-py ConstrucaoGrafos/Construcao.py
-py ExportacaoGrafos/RodarExportacao.py
-
 Saída esperada
 --------------
 
@@ -57,25 +51,6 @@ ExportacaoGrafos/saida_gexf/
 ├── grafo_2_fechamentos.gexf
 ├── grafo_3_reviews_merges.gexf
 └── grafo_4_integrado.gexf
-
-Como rodar o exemplo local
---------------------------
-
-Dentro de ExportacaoGrafos:
-
-python RodarExemploLocal.py
-
-Depois conferir:
-
-python ConferirGexf.py saida_gexf_exemplo/grafo_4_integrado.gexf
-
-A saída deve mostrar arestas encontradas.
-
-Problema comum: arquivo sem arestas
------------------------------------
-
-Se o .gexf sair sem arestas, quase sempre é porque os nomes dos usuários nos JSONs
-não batem com o mapeamento_vertices.json.
 
 Exemplo:
 

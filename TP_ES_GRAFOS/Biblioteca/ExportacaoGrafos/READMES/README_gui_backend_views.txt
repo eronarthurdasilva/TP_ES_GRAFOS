@@ -39,13 +39,9 @@ Projeto/
     ├── gui_views.py
     └── RodarInterfaceGrafos.py
 
-Na raiz do projeto, execute:
+Execute:
 
 python ExportacaoGrafos/RodarInterfaceGrafos.py
-
-Ou no Windows:
-
-py ExportacaoGrafos/RodarInterfaceGrafos.py
 
 SAÍDAS GERADAS
 --------------
