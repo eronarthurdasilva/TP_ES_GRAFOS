@@ -255,7 +255,51 @@ pela interface.
 \label{fig:tela-execucao}
 \end{figure}
 
-\section{Resultados Esperados e Comparação dos Repositórios}
+\section{Execução da Ferramenta}
+
+A ferramenta pode ser executada diretamente pelo arquivo \texttt{main.py}, que
+coordena as etapas de extração, processamento, construção dos grafos, cálculo
+das métricas e exportação dos resultados. A execução principal recebe como
+parâmetro o repositório analisado, permitindo selecionar entre \texttt{h3} e
+\texttt{hyprland}. Também é possível executar apenas o processamento dos dados
+locais, sem realizar nova coleta na API do GitHub, por meio da opção
+\texttt{--process-only}.
+
+\begin{verbatim}
+python Biblioteca/main.py --repo h3 --process-only
+\end{verbatim}
+
+Após a execução, os resultados são organizados em arquivos JSON e CSV,
+utilizados tanto pela interface web quanto pelas exportações para visualização
+externa. A interface web local também permite acionar o pipeline, atualizar os
+dados exibidos e consultar os logs da execução. Dessa forma, a aplicação
+separada exigida no enunciado é usada para consumir a API implementada e
+demonstrar as operações disponíveis.
+
+\section{Testes e Validação}
+
+Foram desenvolvidos testes unitários para validar as principais partes da
+solução. Na estrutura de grafos, os testes verificam o comportamento da classe
+abstrata \texttt{AbstractGraph} e das implementações concretas
+\texttt{AdjacencyListGraph} e \texttt{AdjacencyMatrixGraph}. Esses testes
+cobrem operações como criação de grafos, adição e remoção de arestas,
+verificação de existência de arestas, consulta de graus, pesos de vértices e
+arestas, conectividade, grafo vazio, grafo completo e exportação.
+
+Também foram implementados testes para a etapa de extração e processamento dos
+dados. Esses testes validam o cliente GitHub, os coletores de issues e pull
+requests, e o parser responsável por transformar os dados brutos em interações
+processadas. Além disso, há testes para a construção dos grafos a partir dos
+arquivos JSON processados, verificando se os pesos são acumulados corretamente,
+se os rótulos dos vértices são atribuídos e se as representações por matriz e
+lista produzem resultados equivalentes.
+
+Essa validação contribui para garantir que a ferramenta respeita as restrições
+do enunciado, como não permitir laços, evitar múltiplas arestas, lançar
+exceções para operações inconsistentes e manter a compatibilidade entre as duas
+representações de grafos.
+
+\section{Resultados Obtidos e Comparação dos Repositórios}
 
 A análise dos dois repositórios permite observar comportamentos distintos. No
 Hyprland, a maior quantidade de interações gera uma rede mais complexa, com
@@ -270,6 +314,35 @@ Hyprland, facilitando a validação visual da ferramenta e a compreensão das
 estruturas produzidas. Assim, a escolha dos dois repositórios contribui para
 avaliar a solução tanto em um cenário com maior volume de dados quanto em um
 cenário mais simples e visualmente interpretável.
+
+No conjunto processado pela ferramenta, o grafo de comentários possui 527
+vértices, 853 arestas direcionadas e peso total de 3802 interações. O grafo de
+fechamentos possui 102 vértices e 100 arestas direcionadas, enquanto o grafo de
+reviews, aprovações e merges possui 158 vértices e 200 arestas direcionadas. O
+grafo integrado consolida as interações e apresenta 564 vértices, 978 arestas
+direcionadas, 952 arestas não direcionadas e peso total de 7640 interações.
+Esses resultados evidenciam que a ferramenta consegue consolidar diferentes
+tipos de colaboração em uma única estrutura analisável, mantendo também grafos
+separados para inspeções específicas.
+
+\section{Divisão de Responsabilidades}
+
+A divisão de responsabilidades entre os integrantes do grupo foi organizada de
+forma a cobrir as principais etapas do desenvolvimento da ferramenta, desde a
+extração dos dados até a documentação e apresentação dos resultados.
+
+\begin{itemize}
+    \item \textbf{Rafael}: documentação e implementação do frontend do projeto.
+    \item \textbf{Eron}: desenvolvimento da extração dos dados, produção do
+    vídeo, implementação das métricas de centralidade e elaboração dos slides
+    da apresentação.
+    \item \textbf{João}: desenvolvimento dos testes da parte 2 do trabalho e
+    criação da aplicação demo.
+    \item \textbf{Gabriel}: preparo das exportações dos dados relevantes para a
+    criação da GUI e implementação das métricas de estrutura e coesão.
+    \item \textbf{Rodrigo}: desenvolvimento da construção dos grafos a partir
+    dos dados extraídos e README principal da aplicação.
+\end{itemize}
 
 \section{Conclusão}
 
