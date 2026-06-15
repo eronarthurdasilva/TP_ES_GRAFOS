@@ -9,153 +9,282 @@
      
 \sloppy
 
-\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
-
-\author{Luciana P. Nedel\inst{1}, Rafael H. Bordini\inst{2}, Flávio Rech
-  Wagner\inst{1}, Jomi F. Hübner\inst{3} }
+\title{Trabalho Prático de Teoria dos Grafos e Computabilidade\\Processamento e Geração de Grafos}
 
 
-\address{Instituto de Informática -- Universidade Federal do Rio Grande do Sul
-  (UFRGS)\\
-  Caixa Postal 15.064 -- 91.501-970 -- Porto Alegre -- RS -- Brazil
-\nextinstitute
-  Department of Computer Science -- University of Durham\\
-  Durham, U.K.
-\nextinstitute
-  Departamento de Sistemas e Computação\\
-  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
-  \email{\{nedel,flavio\}@inf.ufrgs.br, R.Bordini@durham.ac.uk,
-  jomi@inf.furb.br}
-}
+\author{Rafael M. B. Baptista\inst{1}, Gabriel Felipe S. de Sousa\inst{1}, João Lucas G. Teles\inst{1},
+\\Rodrigo A. Rocha\inst{1}, Eron Arthur da Silva\inst{1} }
+
+
+\address{Instituto de Ciências Exatas e Informática -- Pontifícia Universidade\\Católica de Minas Gerais (PUCMG) }
+
 
 \begin{document} 
 
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+This work presents a computational tool for modeling and analyzing collaboration
+networks in open-source GitHub repositories using graph theory concepts. Users
+are represented as vertices, while interactions extracted from issues, pull
+requests, comments, reviews, approvals, closures, and merges are represented as
+directed weighted edges. The tool implements graph structures based on adjacency
+lists and adjacency matrices, performs data extraction and processing, computes
+centrality, cohesion, structure, and community metrics, and provides visual
+interfaces for graph and metric inspection. Two repositories were selected for
+analysis: Hyprland, due to its large number of interactions and active
+collaboration network, and h3, due to its smaller interaction volume, which
+facilitates clearer graph visualization and comparative analysis.
 \end{abstract}
      
-\begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
+\begin{resumo}
+Este trabalho apresenta uma ferramenta computacional para modelar e analisar
+redes de colaboração em repositórios GitHub de código aberto por meio de grafos.
+Os usuários são representados como vértices, enquanto interações extraídas de
+issues, pull requests, comentários, revisões, aprovações, fechamentos e merges
+são representadas como arestas direcionadas e ponderadas. A solução implementa
+estruturas de grafos por lista e matriz de adjacência, realiza coleta e
+processamento dos dados, calcula métricas de centralidade, estrutura, coesão e
+comunidade, e disponibiliza interfaces para visualização dos grafos e resultados.
+Foram escolhidos os repositórios Hyprland, por apresentar grande volume de
+interações e uma rede colaborativa mais densa, e h3, por possuir quantidade
+reduzida de interações, facilitando a visualização e a comparação dos grafos.
 \end{resumo}
 
 
-\section{General Information}
+\section{Introdução}
 
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
+Projetos de código aberto hospedados no GitHub concentram diferentes formas de
+colaboração entre desenvolvedores, como discussões em issues, revisões de pull
+requests, aprovações, fechamentos e merges. Essas interações formam uma rede de
+relacionamentos que pode ser modelada por grafos, permitindo identificar
+colaboradores centrais, grupos de atuação e padrões de coesão dentro da
+comunidade do projeto. A análise de redes complexas é amplamente utilizada para
+compreender estruturas de relacionamento, centralidade, agrupamentos e fluxos de
+informação em sistemas sociais e técnicos~\cite{newman2010networks}.
 
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
+Este trabalho desenvolve uma ferramenta computacional para extrair, processar,
+modelar e analisar interações entre usuários de repositórios GitHub, usando
+conceitos de teoria dos grafos. Cada usuário é representado como um vértice, e
+cada interação entre usuários é representada como uma aresta direcionada e
+ponderada. A ferramenta implementa duas estruturas de representação de grafos,
+lista de adjacência e matriz de adjacência, além de módulos de coleta,
+processamento, cálculo de métricas, exportação e visualização.
 
-\section{First Page} \label{sec:firstpage}
+Foram escolhidos dois repositórios para análise: \textit{Hyprland}
+(\texttt{hyprwm/Hyprland}) e \textit{h3} (\texttt{h3js/h3}). O Hyprland foi
+selecionado por apresentar um grande volume de interações e uma comunidade ativa,
+permitindo observar uma rede colaborativa mais densa. O h3 foi escolhido por
+possuir uma quantidade menor de interações, facilitando a visualização dos
+grafos e a comparação dos resultados obtidos.
 
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
+\section{Modelagem do Problema}
 
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
+A modelagem proposta considera que cada usuário participante das interações do
+repositório é um vértice do grafo. As interações entre usuários são convertidas
+em arestas direcionadas, indicando a origem e o destino da relação. Por exemplo,
+quando um usuário comenta em uma issue aberta por outro usuário, cria-se uma
+aresta do autor do comentário para o autor da issue. Quando um usuário fecha uma
+issue criada por outro, cria-se uma aresta representando essa ação.
 
-\section{CD-ROMs and Printed Proceedings}
+Foram construídos três grafos específicos e um grafo integrado:
 
-In some conferences, the papers are published on CD-ROM while only the
-abstract is published in the printed Proceedings. In this case, authors are
-invited to prepare two final versions of the paper. One, complete, to be
-published on the CD and the other, containing only the first page, with
-abstract and ``resumo'' (for papers in Portuguese).
+\begin{itemize}
+    \item \textbf{Grafo 1 -- Comentários}: representa comentários em issues e
+    pull requests.
+    \item \textbf{Grafo 2 -- Fechamentos}: representa fechamentos de issues por
+    usuários diferentes dos autores.
+    \item \textbf{Grafo 3 -- Reviews e merges}: representa revisões, aprovações
+    e merges em pull requests.
+    \item \textbf{Grafo 4 -- Integrado}: combina todas as interações anteriores
+    em um único grafo ponderado.
+\end{itemize}
 
-\section{Sections and Paragraphs}
+As arestas possuem pesos para representar a intensidade das interações. Assim,
+interações mais relevantes no processo colaborativo, como revisões e merges,
+podem ter maior influência nas métricas do grafo do que interações mais simples,
+como comentários.
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\section{Repositórios Analisados}
 
-\subsection{Subsections}
+Para a realização deste trabalho, foram selecionados dois repositórios públicos
+do GitHub: \texttt{hyprwm/Hyprland} e \texttt{h3js/h3}. A escolha considerou
+tanto a relevância dos projetos quanto a diferença no volume de interações
+entre suas comunidades, permitindo avaliar a ferramenta em cenários distintos.
 
-The subsection titles must be in boldface, 12pt, flush left.
+O Hyprland é um compositor Wayland dinâmico para ambientes Linux, voltado à
+construção de uma experiência de desktop moderna, com janelas em mosaico,
+animações e alto grau de personalização~\cite{hyprlandDocs}. Por ser um projeto
+de infraestrutura gráfica utilizado por muitos usuários e colaboradores, seu
+repositório apresenta um volume elevado de issues, pull requests, comentários,
+revisões e merges. Essa característica torna o Hyprland um estudo de caso
+adequado para observar redes colaborativas mais densas, identificar usuários
+centrais, comunidades internas e possíveis pontes entre grupos de
+desenvolvimento.
 
-\section{Figures and Captions}\label{sec:figs}
+O h3 é uma biblioteca geoespacial criada originalmente pela Uber para indexação
+hierárquica da superfície terrestre por meio de células hexagonais
+\cite{h3Docs}. O repositório \texttt{h3js/h3} corresponde à implementação em
+JavaScript dessa tecnologia, sendo usado em aplicações de mapas, análise
+espacial, visualização de dados geográficos e processamento de informações
+baseadas em localização. Em comparação com o Hyprland, o h3 possui uma
+quantidade menor de interações no conjunto analisado, o que facilita a
+visualização dos grafos gerados e a interpretação manual das relações entre
+usuários.
 
+Assim, os dois repositórios foram escolhidos de forma complementar. O Hyprland
+permite testar a solução em um cenário com maior quantidade de interações e
+maior complexidade estrutural, enquanto o h3 oferece um cenário mais reduzido,
+adequado para validação visual da ferramenta e comparação dos resultados.
 
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
+\section{Estruturas de Dados e Implementação}
+
+A implementação foi organizada em módulos responsáveis por etapas específicas
+do fluxo de execução. O módulo \texttt{ExtracaoDados} realiza a comunicação com
+a API GraphQL do GitHub, coleta issues e pull requests e salva os dados brutos
+em arquivos JSON. Em seguida, o módulo \texttt{InteractionParser} transforma os
+dados brutos em interações padronizadas, separadas em arquivos processados.
+
+Um exemplo de estrutura processada utilizada para representar uma aresta é
+apresentado a seguir:
+
+\begin{verbatim}
+{
+  "de": "usuario_origem",
+  "para": "usuario_destino",
+  "peso": 2
+}
+\end{verbatim}
+
+Após o processamento, o módulo \texttt{MapeamentoVertices} cria um mapeamento
+entre nomes de usuários e identificadores numéricos. Esse mapeamento é usado na
+construção dos grafos:
+
+\begin{verbatim}
+{
+  "global": {
+    "mapeamento": {
+      "usuario_a": 0,
+      "usuario_b": 1,
+      "usuario_c": 2
+    }
+  }
+}
+\end{verbatim}
+
+A construção dos grafos é feita pela classe \texttt{Construcao}, que instancia
+duas representações: \texttt{AdjacencyListGraph} e
+\texttt{AdjacencyMatrixGraph}. Ambas herdam de \texttt{AbstractGraph}, uma classe
+abstrata que define a API comum exigida pelo trabalho, incluindo métodos para
+adição e remoção de arestas, consulta de pesos, graus de entrada e saída,
+verificação de conectividade e exportação para formatos compatíveis com Gephi.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
+\includegraphics[width=0.95\textwidth]{figuras/diagrama_classes.png}
+\caption{Diagrama de classes da ferramenta desenvolvida.}
+\label{fig:diagrama-classes}
 \end{figure}
+
+\section{Métricas Calculadas}
+
+A ferramenta calcula métricas de centralidade, estrutura, coesão e comunidade.
+As métricas de centralidade permitem identificar usuários com maior influência
+ou participação na rede. A centralidade de grau indica a quantidade de conexões
+diretas de um vértice, enquanto a centralidade de intermediação permite observar
+vértices que atuam como pontes entre diferentes regiões do grafo
+\cite{freeman1978centrality}. Também são calculadas a centralidade de
+proximidade e o PageRank, métrica originalmente proposta para ranqueamento de
+páginas na Web, mas aplicável a grafos direcionados em geral
+\cite{page1999pagerank}.
+
+As métricas de estrutura e coesão incluem densidade, coeficiente de
+aglomeração e assortatividade por grau. A densidade indica o quanto a rede se
+aproxima de um grafo completamente conectado. O coeficiente de aglomeração mede
+a tendência dos usuários formarem grupos locais, enquanto a assortatividade
+indica se vértices com graus semelhantes tendem a se conectar entre si
+\cite{newman2002assortative}.
+
+Por fim, as métricas de comunidade permitem identificar grupos de usuários com
+maior frequência de interação entre si. A detecção de comunidades é uma
+abordagem comum na análise de redes sociais e biológicas, pois evidencia
+subestruturas internas em redes complexas~\cite{girvan2002community}. Também
+são analisados \textit{bridging ties}, isto é, usuários que conectam
+comunidades diferentes e atuam como pontes na rede colaborativa.
+
+\section{Interface e Visualização}
+
+Além da execução por linha de comando, foi desenvolvida uma interface web local
+para facilitar a visualização dos resultados. A interface permite escolher o
+repositório analisado, executar o pipeline de processamento, visualizar métricas
+resumidas, consultar rankings de centralidade, observar comunidades detectadas
+e inspecionar uma amostra visual do grafo.
+
+Os grafos também podem ser exportados no formato GEXF, compatível com o Gephi,
+ferramenta amplamente utilizada para exploração e visualização de redes
+\cite{bastian2009gephi}. Essa exportação permite que os resultados produzidos
+pela ferramenta sejam analisados em softwares externos especializados.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
+\includegraphics[width=0.95\textwidth]{figuras/tela_metricas.png}
+\caption{Tela da interface web com resumo das métricas dos grafos.}
+\label{fig:tela-metricas}
 \end{figure}
 
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
+A Figura~\ref{fig:tela-grafo} apresenta a visualização gráfica de uma amostra
+do grafo integrado. Essa visualização é especialmente útil no repositório h3,
+pois a menor quantidade de interações facilita a inspeção visual das relações
+entre usuários.
 
-\begin{table}[ht]
+\begin{figure}[ht]
 \centering
-\caption{Variables to be considered on the evaluation of interaction
-  techniques}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
-\end{table}
+\includegraphics[width=0.95\textwidth]{figuras/tela_grafo.png}
+\caption{Visualização do grafo integrado na interface web.}
+\label{fig:tela-grafo}
+\end{figure}
 
-\section{Images}
+A Figura~\ref{fig:tela-execucao} mostra a aba de execução, utilizada para
+acompanhar os logs do pipeline quando a coleta ou o processamento são acionados
+pela interface.
 
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figuras/tela_execucao.png}
+\caption{Aba de execução exibindo logs do pipeline.}
+\label{fig:tela-execucao}
+\end{figure}
 
-\section{References}
+\section{Resultados Esperados e Comparação dos Repositórios}
 
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
+A análise dos dois repositórios permite observar comportamentos distintos. No
+Hyprland, a maior quantidade de interações gera uma rede mais complexa, com
+maior número de vértices e arestas, favorecendo a análise de centralidade,
+comunidades e pontes entre grupos. Esse repositório é adequado para observar
+fenômenos típicos de redes colaborativas maiores, como concentração de
+interações em usuários centrais e formação de subcomunidades.
 
-The references must be listed using 12 point font size, with 6 points of space
-before each reference. The first line of each reference should not be
-indented, while the subsequent should be indented by 0.5 cm.
+No h3, a quantidade reduzida de interações permite uma visualização mais clara
+dos grafos gerados. Esse repositório foi utilizado como contraponto ao
+Hyprland, facilitando a validação visual da ferramenta e a compreensão das
+estruturas produzidas. Assim, a escolha dos dois repositórios contribui para
+avaliar a solução tanto em um cenário com maior volume de dados quanto em um
+cenário mais simples e visualmente interpretável.
+
+\section{Conclusão}
+
+Este trabalho apresentou uma ferramenta para análise de colaboração em
+repositórios GitHub utilizando grafos direcionados e ponderados. A solução
+implementa coleta de dados, processamento de interações, construção de grafos em
+lista e matriz de adjacência, cálculo de métricas e visualização por interface
+web local.
+
+A escolha dos repositórios Hyprland e h3 permitiu avaliar a ferramenta em dois
+cenários complementares: um com grande volume de interações, adequado para
+análises mais densas de redes colaborativas, e outro com menor volume de dados,
+mais apropriado para inspeção visual. Com isso, a ferramenta demonstra a
+aplicabilidade de conceitos de teoria dos grafos na compreensão da dinâmica de
+colaboração em projetos de código aberto.
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}

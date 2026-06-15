@@ -1,5 +1,7 @@
 # TP_ES_GRAFOS
 
+### Link da apresentação do projeto: [Apresentação](https://youtu.be/PH0nG5DPUaQ)
+
 Projeto de grafos para análise de colaboração em repositórios GitHub.
 
 O fluxo principal coleta, processa e monta os grafos a partir de issues, pull requests, comentários, revisões e merges. As métricas são executadas automaticamente após a construção dos grafos, e a exportação dos grafos também roda por padrão.
