@@ -1,6 +1,7 @@
 # TP_ES_GRAFOS
 
-### Link da apresentação do projeto: [Apresentação](https://youtu.be/PH0nG5DPUaQ)
+### Link do vídeo da apresentação do projeto: [Vídeo](https://youtu.be/PH0nG5DPUaQ)
+### Link dos slides da apresentação do projeto: [Slides](./TP_ES_GRAFOS/Doc/Apresentacao.pdf)
 
 Projeto de grafos para análise de colaboração em repositórios GitHub.
 
