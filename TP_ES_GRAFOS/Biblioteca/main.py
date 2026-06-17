@@ -184,7 +184,10 @@ def main(process_only: bool = False, force: bool = False, repo: str = "h3", expo
     )
 
     construtor = Construcao(dados_processados=dados_processados, arquivo_mapeamento=mapeamento_saida)
+    start = time.perf_counter()
     grafo_lista, grafo_matriz = construtor.construir_todos()
+    montagem_time = time.perf_counter() - start
+    print(f"Tempo de montagem dos grafos: {montagem_time:.3f}s")
 
     _executar_metricas(grafo_lista, grafo_matriz, repo, dados_processados)
 

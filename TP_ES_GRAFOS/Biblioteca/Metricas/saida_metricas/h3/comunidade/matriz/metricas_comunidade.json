@@ -1,6 +1,6 @@
 {
-  "num_vertices": 564,
-  "num_arestas_nao_direcionadas": 952,
+  "num_vertices": 565,
+  "num_arestas_nao_direcionadas": 953,
   "num_comunidades": 51,
   "comunidades": [
     {
@@ -436,7 +436,7 @@
     },
     {
       "id": 232,
-      "tamanho": 34,
+      "tamanho": 35,
       "membros": [
         "3m1n3nc3",
         "8ctavio",
@@ -466,6 +466,7 @@
         "onmax",
         "pkg-pr-new",
         "pupuking723",
+        "rafaumeu",
         "ruguoba",
         "sergioazoc",
         "terminalchai",
@@ -863,7 +864,7 @@
       ]
     },
     {
-      "id": 473,
+      "id": 474,
       "tamanho": 5,
       "membros": [
         "AloisSeckar",
@@ -874,7 +875,7 @@
       ]
     }
   ],
-  "modularidade": 0.432428,
+  "modularidade": 0.433075,
   "bridging_ties": [
     {
       "vertice": 22,
@@ -1029,7 +1030,7 @@
       "grau": 3
     },
     {
-      "vertice": 461,
+      "vertice": 462,
       "label": "randName",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.666667,
@@ -1037,7 +1038,7 @@
       "grau": 3
     },
     {
-      "vertice": 490,
+      "vertice": 491,
       "label": "silvercent011",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.666667,
@@ -1045,7 +1046,7 @@
       "grau": 3
     },
     {
-      "vertice": 560,
+      "vertice": 561,
       "label": "zhiyuanzmj",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.666667,
@@ -1141,7 +1142,7 @@
       "grau": 5
     },
     {
-      "vertice": 531,
+      "vertice": 532,
       "label": "unite4",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.6,
@@ -1181,7 +1182,7 @@
       "grau": 7
     },
     {
-      "vertice": 542,
+      "vertice": 543,
       "label": "wobsoriano",
       "comunidades_vizinhas": 5,
       "indice_intermediacao": 0.571429,
@@ -1245,7 +1246,7 @@
       "grau": 6
     },
     {
-      "vertice": 470,
+      "vertice": 471,
       "label": "rijkvanzanten",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.5,
@@ -2005,7 +2006,7 @@
       "grau": 2
     },
     {
-      "vertice": 464,
+      "vertice": 465,
       "label": "renhiyama",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2013,7 +2014,7 @@
       "grau": 2
     },
     {
-      "vertice": 474,
+      "vertice": 475,
       "label": "rrd108",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2021,7 +2022,7 @@
       "grau": 2
     },
     {
-      "vertice": 488,
+      "vertice": 489,
       "label": "sergioazoc",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2029,7 +2030,7 @@
       "grau": 2
     },
     {
-      "vertice": 489,
+      "vertice": 490,
       "label": "shtse8",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2037,7 +2038,7 @@
       "grau": 2
     },
     {
-      "vertice": 498,
+      "vertice": 499,
       "label": "soub4i",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2045,7 +2046,7 @@
       "grau": 2
     },
     {
-      "vertice": 501,
+      "vertice": 502,
       "label": "sppmstar",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2053,7 +2054,7 @@
       "grau": 2
     },
     {
-      "vertice": 503,
+      "vertice": 504,
       "label": "starzou",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2061,7 +2062,7 @@
       "grau": 2
     },
     {
-      "vertice": 527,
+      "vertice": 528,
       "label": "triandamai",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2069,7 +2070,7 @@
       "grau": 2
     },
     {
-      "vertice": 530,
+      "vertice": 531,
       "label": "typed-sigterm",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2077,7 +2078,7 @@
       "grau": 2
     },
     {
-      "vertice": 535,
+      "vertice": 536,
       "label": "victorpagan",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2085,7 +2086,7 @@
       "grau": 2
     },
     {
-      "vertice": 543,
+      "vertice": 544,
       "label": "wolodev",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2093,7 +2094,7 @@
       "grau": 2
     },
     {
-      "vertice": 544,
+      "vertice": 545,
       "label": "wuiyang",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2101,7 +2102,7 @@
       "grau": 2
     },
     {
-      "vertice": 554,
+      "vertice": 555,
       "label": "ysknsid25",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2109,7 +2110,7 @@
       "grau": 2
     },
     {
-      "vertice": 558,
+      "vertice": 559,
       "label": "zelid",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2117,7 +2118,7 @@
       "grau": 2
     },
     {
-      "vertice": 561,
+      "vertice": 562,
       "label": "zsilbi",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.5,
@@ -2133,7 +2134,7 @@
       "grau": 32
     },
     {
-      "vertice": 481,
+      "vertice": 482,
       "label": "sandros94",
       "comunidades_vizinhas": 5,
       "indice_intermediacao": 0.428571,
@@ -2141,7 +2142,7 @@
       "grau": 14
     },
     {
-      "vertice": 465,
+      "vertice": 466,
       "label": "renovate",
       "comunidades_vizinhas": 4,
       "indice_intermediacao": 0.428571,
@@ -2165,7 +2166,7 @@
       "grau": 12
     },
     {
-      "vertice": 521,
+      "vertice": 522,
       "label": "tobiasdiez",
       "comunidades_vizinhas": 4,
       "indice_intermediacao": 0.416667,
@@ -2317,15 +2318,15 @@
       "grau": 6
     },
     {
-      "vertice": 473,
+      "vertice": 474,
       "label": "robertorinaldi-dev",
       "comunidades_vizinhas": 3,
       "indice_intermediacao": 0.333333,
-      "comunidade_atual": 473,
+      "comunidade_atual": 474,
       "grau": 6
     },
     {
-      "vertice": 502,
+      "vertice": 503,
       "label": "stafyniaksacha",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2645,7 +2646,7 @@
       "grau": 3
     },
     {
-      "vertice": 462,
+      "vertice": 463,
       "label": "redbar0n",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2653,7 +2654,7 @@
       "grau": 3
     },
     {
-      "vertice": 508,
+      "vertice": 509,
       "label": "teleskop150750",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2661,7 +2662,7 @@
       "grau": 3
     },
     {
-      "vertice": 509,
+      "vertice": 510,
       "label": "terminalchai",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2669,7 +2670,7 @@
       "grau": 3
     },
     {
-      "vertice": 537,
+      "vertice": 538,
       "label": "vinnitu",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2677,7 +2678,7 @@
       "grau": 3
     },
     {
-      "vertice": 547,
+      "vertice": 548,
       "label": "xjccc",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2685,7 +2686,7 @@
       "grau": 3
     },
     {
-      "vertice": 555,
+      "vertice": 556,
       "label": "ytjmt",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.333333,
@@ -2696,9 +2697,9 @@
       "vertice": 232,
       "label": "coderabbitai",
       "comunidades_vizinhas": 7,
-      "indice_intermediacao": 0.319149,
+      "indice_intermediacao": 0.3125,
       "comunidade_atual": 232,
-      "grau": 47
+      "grau": 48
     },
     {
       "vertice": 431,
@@ -2813,7 +2814,7 @@
       "grau": 4
     },
     {
-      "vertice": 487,
+      "vertice": 488,
       "label": "septatrix",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.25,
@@ -2821,7 +2822,7 @@
       "grau": 4
     },
     {
-      "vertice": 494,
+      "vertice": 495,
       "label": "sisou",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.25,
@@ -2829,7 +2830,7 @@
       "grau": 4
     },
     {
-      "vertice": 546,
+      "vertice": 547,
       "label": "xhebox",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.25,
@@ -2853,7 +2854,7 @@
       "grau": 5
     },
     {
-      "vertice": 460,
+      "vertice": 461,
       "label": "ramsesgarate",
       "comunidades_vizinhas": 2,
       "indice_intermediacao": 0.2,

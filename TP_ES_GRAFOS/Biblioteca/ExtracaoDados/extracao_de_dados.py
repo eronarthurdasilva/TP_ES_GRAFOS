@@ -7,6 +7,7 @@ from github_client import GitHubClient
 from issues_fetcher import IssuesFetcher
 from pr_fetcher import PRFetcher
 from processor.interaction_parser import InteractionParser
+import time
 
 
 class ExtracaoDados:
@@ -63,6 +64,9 @@ class ExtracaoDados:
         return sorted(set(found))
 
     def run(self, process_only: bool = False, force: bool = False) -> None:
+        collection_time = 0.0
+        processing_time = 0.0
+
         if process_only:
             if not self._tem_dados_brutos():
                 print(
@@ -73,8 +77,11 @@ class ExtracaoDados:
             arquivos = self._listar_dados_brutos()
             print("Modo process_only ativo: pulando coleta e processando JSONs existentes...")
             print(f"Arquivos encontrados em {self.dados_brutos}: {arquivos}")
+            start = time.perf_counter()
             self.interaction_parser.parse()
+            processing_time = time.perf_counter() - start
             print("Processamento completo.")
+            print(f"Tempo de coleta: {collection_time:.3f}s | Tempo de processamento: {processing_time:.3f}s")
             return
 
         # Novo comportamento: se já houver dados brutos e não houver --force,
@@ -85,12 +92,22 @@ class ExtracaoDados:
                 "Dados brutos detectados: pulando coleta automática."
                 f" Use --force para forçar nova coleta. Arquivos: {arquivos}"
             )
+            start = time.perf_counter()
             self.interaction_parser.parse()
+            processing_time = time.perf_counter() - start
             print("Processamento completo.")
+            print(f"Tempo de coleta: {collection_time:.3f}s | Tempo de processamento: {processing_time:.3f}s")
             return
 
         # Comportamento padrão: realizar a coleta e depois processar.
+        start = time.perf_counter()
         self.issues_fetcher.fetch()
         self.pr_fetcher.fetch()
+        collection_time = time.perf_counter() - start
+
+        start = time.perf_counter()
         self.interaction_parser.parse()
+        processing_time = time.perf_counter() - start
+
         print("Extração completa.")
+        print(f"Tempo de coleta: {collection_time:.3f}s | Tempo de processamento: {processing_time:.3f}s")
