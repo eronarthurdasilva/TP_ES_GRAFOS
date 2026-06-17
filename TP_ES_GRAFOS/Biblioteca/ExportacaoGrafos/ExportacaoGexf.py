@@ -1,43 +1,36 @@
+
 """ExportacaoGexf.py
 ===================
 
-Exporta os 4 grafos do trabalho para GEXF, formato aceito pelo Gephi.
+Exporta os 4 grafos do trabalho para GEXF, usando a etapa de construção
+existente em ConstrucaoGrafos/Construcao.py.
 
-Esta implementação NÃO usa biblioteca de grafos, como NetworkX, igraph ou graph-tool.
-Ela usa apenas recursos básicos do Python e bibliotecas padrão: dict, list, json,
-pathlib, argparse e math.
+Esta implementação altera apenas a camada de exportação. O Construcao.py não
+precisa ser modificado.
 
-Ajustes para visualização no Gephi:
-- Por padrão, exporta apenas vértices que possuem arestas.
-- Por padrão, ignora auto-laços (arestas de um vértice para ele mesmo).
-- Por padrão, normaliza o peso visual da aresta para evitar que o Gephi desenhe
-  arestas gigantes. O peso original fica preservado no atributo peso_original.
+Fluxo:
+    dados_processados/*.json
+        -> Construcao.py
+        -> objeto de grafo em memória
+        -> ExportacaoGexf.py
+        -> arquivos .gexf para o Gephi
 
-Entrada esperada:
-    dados_processados/
-        comentarios.json
-        fechamentos.json
-        reviews_merges.json
-
-Cada JSON deve conter interações com os campos principais:
-    de      -> origem da aresta
-    para    -> destino da aresta
-    peso    -> peso da aresta
-
-Também são aceitos nomes alternativos:
-    origem/source/from
-    destino/target/to
-    peso/weight
+A implementação não usa bibliotecas de grafos, como NetworkX, igraph ou graph-tool.
 """
 
+from __future__ import annotations
+
 import argparse
+import importlib.util
 import json
 import math
+import sys
 from pathlib import Path
+from typing import Iterable, Dict, List, Tuple, Optional, Any
 
 
 class ExportacaoGexf:
-    """Classe responsável por exportar os grafos para arquivos .gexf."""
+    """Classe responsável por exportar os grafos construídos para arquivos .gexf."""
 
     def __init__(
         self,
@@ -53,31 +46,32 @@ class ExportacaoGexf:
         pasta_atual = Path(__file__).resolve().parent
         raiz_projeto = pasta_atual.parent
 
-        self.dados_processados = Path(dados_processados) if dados_processados else raiz_projeto / "ExtracaoDados" / "dados_processados"
-        self.arquivo_mapeamento = Path(arquivo_mapeamento) if arquivo_mapeamento else self._descobrir_arquivo_mapeamento()
+        self.dados_processados = (
+            Path(dados_processados)
+            if dados_processados
+            else raiz_projeto / "ExtracaoDados" / "dados_processados"
+        )
+        self.arquivo_mapeamento = (
+            Path(arquivo_mapeamento)
+            if arquivo_mapeamento
+            else self._descobrir_arquivo_mapeamento()
+        )
         self.pasta_saida = Path(pasta_saida) if pasta_saida else pasta_atual / "saida_gexf"
 
-        # Importante para o Gephi: se True, aparecem milhares de nós soltos.
-        # Para visualização, normalmente é melhor deixar False.
         self.exportar_vertices_isolados = exportar_vertices_isolados
-
-        # Auto-laço = aresta de um vértice para ele mesmo. No Gephi, muitos
-        # auto-laços podem virar desenhos grandes/estranhos e atrapalhar a leitura.
         self.ignorar_auto_lacos = ignorar_auto_lacos
-
-        # O peso real pode ser muito alto. Se ele for usado diretamente no campo
-        # weight, o Gephi pode desenhar arestas enormes. Por isso, usamos um peso
-        # visual normalizado no GEXF e guardamos o peso real em peso_original.
         self.normalizar_pesos_gephi = normalizar_pesos_gephi
         self.peso_visual_minimo = float(peso_visual_minimo)
         self.peso_visual_maximo = float(peso_visual_maximo)
 
-        self._mapeamento_cache = None
+        self._classe_construcao_cache = None
 
-    # Caminhos e leitura de arquivos
+    # ------------------------------------------------------------------
+    # Localização e importação do Construcao.py
+    # ------------------------------------------------------------------
 
     def _descobrir_arquivo_mapeamento(self):
-        """Procura o arquivo de mapeamento em locais comuns."""
+        """Procura o arquivo de mapeamento em locais comuns do projeto."""
         pasta_atual = Path(__file__).resolve().parent
         raiz_projeto = pasta_atual.parent
 
@@ -92,6 +86,127 @@ class ExportacaoGexf:
 
         return candidatos[0]
 
+    def _descobrir_arquivo_construcao(self) -> Path:
+        """
+        Localiza o arquivo Construcao.py.
+
+        O caminho principal esperado é:
+            Projeto/Biblioteca/ConstrucaoGrafos/Construcao.py
+
+        Como este arquivo fica em:
+            Projeto/Biblioteca/ExportacaoGrafos/ExportacaoGexf.py
+
+        basta subir uma pasta e procurar ConstrucaoGrafos/Construcao.py.
+        """
+        pasta_atual = Path(__file__).resolve().parent
+        raiz_projeto = pasta_atual.parent
+
+        candidatos = [
+            raiz_projeto / "ConstrucaoGrafos" / "Construcao.py",
+            Path.cwd() / "Biblioteca" / "ConstrucaoGrafos" / "Construcao.py",
+            Path.cwd() / "ConstrucaoGrafos" / "Construcao.py",
+        ]
+
+        for caminho in candidatos:
+            if caminho.exists():
+                return caminho
+
+        caminhos = "\n".join(str(c) for c in candidatos)
+        raise FileNotFoundError(
+            "Não foi possível localizar Construcao.py. Caminhos testados:\n"
+            f"{caminhos}"
+        )
+
+    def _importar_classe_construcao(self):
+        """
+        Importa a classe Construcao diretamente pelo caminho do arquivo.
+
+        Isso evita o erro:
+            TypeError: NoneType takes no arguments
+
+        Esse erro acontecia porque a classe Construcao não estava sendo importada
+        corretamente e acabava ficando como None antes da herança.
+        """
+        if self._classe_construcao_cache is not None:
+            return self._classe_construcao_cache
+
+        caminho_construcao = self._descobrir_arquivo_construcao()
+        pasta_construcao = caminho_construcao.parent
+        raiz_projeto = pasta_construcao.parent
+        pasta_estrutura = raiz_projeto / "EstruturadeClasses"
+
+        # Garante que os imports usados dentro do próprio Construcao.py funcionem.
+        for caminho in [pasta_construcao, pasta_estrutura]:
+            caminho_str = str(caminho)
+            if caminho_str not in sys.path:
+                sys.path.insert(0, caminho_str)
+
+        spec = importlib.util.spec_from_file_location("Construcao", caminho_construcao)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Não foi possível criar spec para: {caminho_construcao}")
+
+        modulo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(modulo)
+
+        if not hasattr(modulo, "Construcao"):
+            raise ImportError(f"O arquivo {caminho_construcao} não possui classe Construcao.")
+
+        self._classe_construcao_cache = modulo.Construcao
+        return self._classe_construcao_cache
+
+    def _criar_construtor_filtrado(self, nomes_arquivos: List[str]):
+        """
+        Cria uma subclasse de Construcao sem modificar o arquivo original.
+
+        A classe Construcao original sempre lê os três JSONs. Para exportar os
+        quatro grafos separadamente, sobrescrevemos apenas _carregar_interacoes()
+        dentro da exportação.
+        """
+        ClasseConstrucao = self._importar_classe_construcao()
+        dados_processados = self.dados_processados
+        arquivo_mapeamento = self.arquivo_mapeamento
+
+        class ConstrucaoFiltrada(ClasseConstrucao):
+            def __init__(self):
+                super().__init__(
+                    dados_processados=dados_processados,
+                    arquivo_mapeamento=arquivo_mapeamento,
+                )
+                self._nomes_arquivos_exportacao = list(nomes_arquivos)
+
+            def _carregar_interacoes(self):
+                """Lê apenas os arquivos escolhidos pela exportação."""
+                for nome in self._nomes_arquivos_exportacao:
+                    arquivo = self.dados_processados / nome
+                    if not arquivo.exists():
+                        print(f"Aviso: arquivo não encontrado: {arquivo}")
+                        continue
+
+                    with arquivo.open("r", encoding="utf-8") as entrada:
+                        dados = json.load(entrada)
+
+                    if isinstance(dados, list):
+                        for item in dados:
+                            if isinstance(item, dict):
+                                yield item
+
+                    elif isinstance(dados, dict):
+                        for chave in ("nodes", "items", "edges", "arestas", "interacoes"):
+                            itens = dados.get(chave)
+                            if isinstance(itens, list):
+                                for item in itens:
+                                    if isinstance(item, dict):
+                                        yield item
+                                break
+                        else:
+                            yield dados
+
+        return ConstrucaoFiltrada()
+
+    # ------------------------------------------------------------------
+    # Utilitários de GEXF
+    # ------------------------------------------------------------------
+
     def _escapar_xml(self, valor):
         """Escapa caracteres especiais para não quebrar o XML/GEXF."""
         texto = str(valor)
@@ -102,208 +217,11 @@ class ExportacaoGexf:
         texto = texto.replace("'", "&apos;")
         return texto
 
-    def _carregar_mapeamento(self):
+    def _normalizar_pesos_para_gephi(self, arestas: Dict[Tuple[int, int], float]):
         """
-        Carrega o mapeamento login -> índice.
+        Converte pesos reais em pesos visuais menores para o Gephi.
 
-        Relação com teoria dos grafos:
-        - Cada login representa um vértice.
-        - O índice é o identificador usado internamente no GEXF.
-        """
-        if self._mapeamento_cache is not None:
-            return self._mapeamento_cache
-
-        if not self.arquivo_mapeamento.exists():
-            raise FileNotFoundError(
-                "Arquivo de mapeamento não encontrado.\n"
-                f"Caminho procurado: {self.arquivo_mapeamento}\n"
-                "Soluções:\n"
-                "1) Rode primeiro: python ConstrucaoGrafos/MapeamentoVertices.py\n"
-                "2) Ou copie mapeamento_vertices.json para dentro de ExportacaoGrafos\n"
-                "3) Ou informe o caminho manualmente em RodarExportacao.py"
-            )
-
-        with self.arquivo_mapeamento.open("r", encoding="utf-8") as arquivo:
-            dados = json.load(arquivo)
-
-        if isinstance(dados, dict) and "global" in dados:
-            mapeamento = dados["global"].get("mapeamento", {})
-        else:
-            mapeamento = dados
-
-        if not isinstance(mapeamento, dict):
-            raise ValueError("Formato inválido para o arquivo de mapeamento de vértices.")
-
-        self._mapeamento_cache = {}
-        for login, indice in mapeamento.items():
-            login_normalizado = str(login).strip()
-            if login_normalizado == "":
-                continue
-            self._mapeamento_cache[login_normalizado] = int(indice)
-
-        return self._mapeamento_cache
-
-    def _carregar_itens_json(self, arquivo_json):
-        """Lê um JSON processado e devolve uma lista de dicionários."""
-        if not arquivo_json.exists():
-            print(f"Aviso: arquivo não encontrado: {arquivo_json}")
-            return []
-
-        with arquivo_json.open("r", encoding="utf-8") as arquivo:
-            dados = json.load(arquivo)
-
-        if isinstance(dados, list):
-            return [item for item in dados if isinstance(item, dict)]
-
-        if isinstance(dados, dict):
-            for chave in ("nodes", "items", "edges", "arestas", "interacoes"):
-                itens = dados.get(chave)
-                if isinstance(itens, list):
-                    return [item for item in itens if isinstance(item, dict)]
-            return [dados]
-
-        return []
-
-    # Normalização de interações para arestas
-
-    def _pegar_primeiro_campo(self, item, nomes):
-        """Busca o primeiro campo existente dentro do dicionário."""
-        for nome in nomes:
-            if nome in item:
-                return item[nome]
-        return None
-
-    def _converter_peso(self, valor):
-        """Converte o peso da aresta para float."""
-        if valor is None:
-            return 1.0
-        try:
-            peso = float(valor)
-            if peso < 0:
-                return 0.0
-            return peso
-        except Exception:
-            return 1.0
-
-    def _agrupar_arestas(self, arquivos):
-        """
-        Lê um ou mais arquivos JSON e agrupa arestas repetidas.
-
-        Retorna:
-            {
-                (origem, destino): peso_total
-            }
-
-        Relação com teoria dos grafos:
-        - origem e destino formam uma aresta direcionada.
-        - peso_total representa a intensidade acumulada da relação.
-        """
-        mapeamento = self._carregar_mapeamento()
-        arestas = {}
-
-        total_itens_lidos = 0
-        total_sem_origem_destino = 0
-        total_fora_do_mapeamento = 0
-        total_auto_lacos_ignorados = 0
-
-        for nome_arquivo in arquivos:
-            caminho = self.dados_processados / nome_arquivo
-            itens = self._carregar_itens_json(caminho)
-            total_itens_lidos += len(itens)
-
-            for item in itens:
-                origem_nome = self._pegar_primeiro_campo(item, ["de", "origem", "source", "from"])
-                destino_nome = self._pegar_primeiro_campo(item, ["para", "destino", "target", "to"])
-                peso = self._pegar_primeiro_campo(item, ["peso", "weight"])
-
-                if origem_nome is None or destino_nome is None:
-                    total_sem_origem_destino += 1
-                    continue
-
-                origem_nome = str(origem_nome).strip()
-                destino_nome = str(destino_nome).strip()
-
-                if origem_nome == "" or destino_nome == "":
-                    total_sem_origem_destino += 1
-                    continue
-
-                if origem_nome not in mapeamento or destino_nome not in mapeamento:
-                    total_fora_do_mapeamento += 1
-                    continue
-
-                origem = mapeamento[origem_nome]
-                destino = mapeamento[destino_nome]
-
-                if self.ignorar_auto_lacos and origem == destino:
-                    total_auto_lacos_ignorados += 1
-                    continue
-
-                chave = (origem, destino)
-
-                if chave not in arestas:
-                    arestas[chave] = 0.0
-
-                arestas[chave] += self._converter_peso(peso)
-
-        if len(arestas) == 0:
-            print("Aviso: nenhuma aresta foi gerada para:", ", ".join(arquivos))
-            print(f"  Itens lidos: {total_itens_lidos}")
-            print(f"  Itens sem origem/destino: {total_sem_origem_destino}")
-            print(f"  Itens fora do mapeamento: {total_fora_do_mapeamento}")
-            print(f"  Auto-laços ignorados: {total_auto_lacos_ignorados}")
-            print("  Verifique se os usuários dos JSONs também existem no mapeamento_vertices.json.")
-        else:
-            print(
-                "Resumo da leitura:", ", ".join(arquivos),
-                f"| itens={total_itens_lidos}",
-                f"| arestas={len(arestas)}",
-                f"| sem_origem_destino={total_sem_origem_destino}",
-                f"| fora_mapeamento={total_fora_do_mapeamento}",
-                f"| auto_lacos_ignorados={total_auto_lacos_ignorados}",
-            )
-
-        return arestas
-
-    def _obter_vertices_para_exportacao(self, arestas):
-        """Define quais vértices serão escritos no GEXF."""
-        mapeamento = self._carregar_mapeamento()
-        indice_para_login = {}
-
-        for login, indice in mapeamento.items():
-            indice_para_login[indice] = login
-
-        if self.exportar_vertices_isolados:
-            return indice_para_login
-
-        vertices_usados = set()
-        for origem, destino in arestas.keys():
-            vertices_usados.add(origem)
-            vertices_usados.add(destino)
-
-        vertices = {}
-        for indice in vertices_usados:
-            if indice in indice_para_login:
-                vertices[indice] = indice_para_login[indice]
-
-        return vertices
-
-    # Tratamento dos pesos para visualização no Gephi
-
-    def _normalizar_pesos_para_gephi(self, arestas):
-        """
-        Converte pesos reais em pesos visuais menores.
-
-        Por que isso existe?
-        - O peso real pode ser muito alto, por exemplo 500, 1000 ou mais.
-        - Se esse número for usado diretamente no atributo weight, o Gephi pode
-          desenhar arestas grossas demais, parecendo grandes polígonos cinza.
-        - Por isso, o GEXF recebe um peso visual entre peso_visual_minimo e
-          peso_visual_maximo.
-        - O peso real continua salvo no atributo peso_original.
-
-        Relação com grafos:
-        - O grafo continua ponderado.
-        - Apenas separamos o peso real da aresta do peso usado para visualização.
+        O peso original continua preservado como atributo peso_original.
         """
         if not arestas:
             return {}
@@ -339,18 +257,76 @@ class ExportacaoGexf:
 
         return pesos_visuais
 
+    # ------------------------------------------------------------------
+    # Extração dos dados do objeto de grafo construído
+    # ------------------------------------------------------------------
+
+    def _extrair_vertices_e_arestas_do_grafo(self, grafo):
+        """
+        Extrai vértices e arestas de um objeto criado pelo Construcao.py.
+
+        Usa apenas a API comum do grafo:
+            - getVertexCount()
+            - getVertexLabel()
+            - hasEdge()
+            - getEdgeWeight()
+
+        Assim funciona tanto com AdjacencyListGraph quanto com
+        AdjacencyMatrixGraph.
+        """
+        quantidade_vertices = grafo.getVertexCount()
+        vertices = {}
+        arestas = {}
+        vertices_usados = set()
+
+        for origem in range(quantidade_vertices):
+            for destino in range(quantidade_vertices):
+                if self.ignorar_auto_lacos and origem == destino:
+                    continue
+
+                if grafo.hasEdge(origem, destino):
+                    peso = float(grafo.getEdgeWeight(origem, destino))
+                    chave = (origem, destino)
+                    arestas[chave] = peso
+                    vertices_usados.add(origem)
+                    vertices_usados.add(destino)
+
+        if self.exportar_vertices_isolados:
+            indices_para_exportar = range(quantidade_vertices)
+        else:
+            indices_para_exportar = sorted(vertices_usados)
+
+        for indice in indices_para_exportar:
+            try:
+                label = grafo.getVertexLabel(indice)
+            except Exception:
+                label = str(indice)
+
+            if label is None or str(label).strip() == "":
+                label = str(indice)
+
+            vertices[indice] = str(label)
+
+        return vertices, arestas
+
+    def _construir_grafo_por_arquivos(self, arquivos: List[str]):
+        """Constrói um grafo usando o Construcao.py filtrado pelos arquivos informados."""
+        construtor = self._criar_construtor_filtrado(arquivos)
+        return construtor.construir_lista()
+
+    # ------------------------------------------------------------------
     # Escrita do GEXF
+    # ------------------------------------------------------------------
 
     def _gerar_gexf(self, nome_grafo, vertices, arestas, tipo_relacao):
         """Gera o conteúdo textual do arquivo .gexf."""
         pesos_visuais = self._normalizar_pesos_para_gephi(arestas)
 
         linhas = []
-
         linhas.append('<?xml version="1.0" encoding="UTF-8"?>')
         linhas.append('<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2">')
         linhas.append('  <meta>')
-        linhas.append('    <creator>ExportacaoGrafos - Python puro</creator>')
+        linhas.append('    <creator>ExportacaoGrafos - usando Construcao.py</creator>')
         linhas.append(f'    <description>{self._escapar_xml(nome_grafo)}</description>')
         linhas.append('  </meta>')
         linhas.append('  <graph mode="static" defaultedgetype="directed">')
@@ -406,12 +382,17 @@ class ExportacaoGexf:
             arquivo.write(conteudo)
         return caminho_saida
 
+    # ------------------------------------------------------------------
     # Métodos públicos
+    # ------------------------------------------------------------------
 
-    def exportar_grafo_de_arquivo(self, nome_arquivo_json, nome_arquivo_saida, nome_grafo, tipo_relacao):
-        """Exporta um grafo individual a partir de um JSON."""
-        arestas = self._agrupar_arestas([nome_arquivo_json])
-        vertices = self._obter_vertices_para_exportacao(arestas)
+    def exportar_grafo_de_arquivos(self, arquivos, nome_arquivo_saida, nome_grafo, tipo_relacao):
+        """Constrói um grafo com o Construcao.py e exporta para GEXF."""
+        grafo = self._construir_grafo_por_arquivos(arquivos)
+        vertices, arestas = self._extrair_vertices_e_arestas_do_grafo(grafo)
+
+        if len(arestas) == 0:
+            print(f"Aviso: grafo sem arestas para {nome_grafo}.")
 
         conteudo = self._gerar_gexf(nome_grafo, vertices, arestas, tipo_relacao)
         caminho = self._salvar_gexf(nome_arquivo_saida, conteudo)
@@ -419,17 +400,23 @@ class ExportacaoGexf:
         print(f"Exportado: {caminho} | vertices={len(vertices)} | arestas={len(arestas)}")
         return caminho
 
+    def exportar_grafo_de_arquivo(self, nome_arquivo_json, nome_arquivo_saida, nome_grafo, tipo_relacao):
+        """Mantém compatibilidade com chamadas antigas que exportam um único JSON."""
+        return self.exportar_grafo_de_arquivos(
+            arquivos=[nome_arquivo_json],
+            nome_arquivo_saida=nome_arquivo_saida,
+            nome_grafo=nome_grafo,
+            tipo_relacao=tipo_relacao,
+        )
+
     def exportar_grafo_integrado(self):
-        """Exporta o grafo integrado, somando os três arquivos de interações."""
-        arquivos = ["comentarios.json", "fechamentos.json", "reviews_merges.json"]
-        arestas = self._agrupar_arestas(arquivos)
-        vertices = self._obter_vertices_para_exportacao(arestas)
-
-        conteudo = self._gerar_gexf("Grafo 4 - Integrado", vertices, arestas, "integrado")
-        caminho = self._salvar_gexf("grafo_4_integrado.gexf", conteudo)
-
-        print(f"Exportado: {caminho} | vertices={len(vertices)} | arestas={len(arestas)}")
-        return caminho
+        """Exporta o grafo integrado, construído com os três arquivos de interações."""
+        return self.exportar_grafo_de_arquivos(
+            arquivos=["comentarios.json", "fechamentos.json", "reviews_merges.json"],
+            nome_arquivo_saida="grafo_4_integrado.gexf",
+            nome_grafo="Grafo 4 - Integrado",
+            tipo_relacao="integrado",
+        )
 
     def exportar_todos(self):
         """Exporta os quatro grafos esperados pelo trabalho."""
@@ -502,6 +489,7 @@ def executar_por_linha_de_comando():
     print("Exportar isolados:", exportador.exportar_vertices_isolados)
     print("Ignorar auto-laços:", exportador.ignorar_auto_lacos)
     print("Normalizar pesos para Gephi:", exportador.normalizar_pesos_gephi)
+    print()
 
     exportador.exportar_todos()
 
